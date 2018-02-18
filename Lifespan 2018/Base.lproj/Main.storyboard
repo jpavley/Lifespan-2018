@@ -23,10 +23,10 @@
                                 <color key="backgroundColor" red="0.77690005317011712" green="0.83743780850000005" blue="0.80479850328211511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNW-RT-BLt" userLabel="Topbar" customClass="BarView" customModule="Lifespan_2018" customModuleProvider="target">
-                                <rect key="frame" x="16" y="36" width="288" height="44"/>
+                                <rect key="frame" x="16" y="36" width="288" height="43.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkZ-qH-dii">
-                                        <rect key="frame" x="76" y="12" width="204" height="21"/>
+                                        <rect key="frame" x="76" y="12" width="204" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -39,6 +39,9 @@
                                         <state key="normal" title="Options">
                                             <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="optionsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e5w-mk-lPY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,7 +50,6 @@
                                     <constraint firstItem="qkZ-qH-dii" firstAttribute="top" secondItem="SNW-RT-BLt" secondAttribute="top" constant="12" id="Zna-lw-PXr"/>
                                     <constraint firstItem="XG7-lj-HjV" firstAttribute="top" secondItem="SNW-RT-BLt" secondAttribute="top" constant="7" id="hva-zm-nTe"/>
                                     <constraint firstAttribute="bottom" secondItem="qkZ-qH-dii" secondAttribute="bottom" constant="11" id="i1d-WM-XWU"/>
-                                    <constraint firstAttribute="height" constant="44" id="oWR-lF-KEL"/>
                                     <constraint firstItem="qkZ-qH-dii" firstAttribute="leading" secondItem="XG7-lj-HjV" secondAttribute="trailing" constant="8" id="qyx-Oc-5UV"/>
                                     <constraint firstItem="XG7-lj-HjV" firstAttribute="leading" secondItem="SNW-RT-BLt" secondAttribute="leading" constant="8" id="wsl-9Q-d2n"/>
                                     <constraint firstAttribute="trailing" secondItem="qkZ-qH-dii" secondAttribute="trailing" constant="8" id="xGO-v2-aEK"/>
@@ -75,24 +77,36 @@
                                                 <state key="normal" title="Day">
                                                     <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="dayAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fpy-tM-mOx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8J-m6-3S1">
                                                 <rect key="frame" x="68" y="0.0" width="68" height="30"/>
                                                 <state key="normal" title="Week">
                                                     <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="weekAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLx-4m-wZF"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dza-9V-PsK">
                                                 <rect key="frame" x="136" y="0.0" width="68" height="30"/>
                                                 <state key="normal" title="Month">
                                                     <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="monthAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lrH-4C-ZXm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72Q-2a-s6J">
                                                 <rect key="frame" x="204" y="0.0" width="68" height="30"/>
                                                 <state key="normal" title="Year">
                                                     <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="yearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cRy-ZA-kCN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -133,6 +147,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="qkZ-qH-dii" id="GCq-QH-6jS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
