@@ -14,7 +14,19 @@
 		180D6607203A0B9300661157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180D6605203A0B9300661157 /* LaunchScreen.storyboard */; };
 		180D660F203A0BF500661157 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D660E203A0BF400661157 /* BarView.swift */; };
 		1870D580203B3BBE0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
+		1870D588203B41C90041EF53 /* LifeClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D587203B41C90041EF53 /* LifeClockTests.swift */; };
+		1870D58F203B41CC0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1870D58A203B41C90041EF53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 180D65F1203A0B9200661157 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 180D65F8203A0B9300661157;
+			remoteInfo = "Lifespan 2018";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		180D65F9203A0B9300661157 /* Lifespan 2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lifespan 2018.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +38,20 @@
 		180D6608203A0B9300661157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180D660E203A0BF400661157 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		1870D57F203B3BBE0041EF53 /* LifeClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClock.swift; sourceTree = "<group>"; };
+		1870D585203B41C90041EF53 /* LifeClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1870D587203B41C90041EF53 /* LifeClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClockTests.swift; sourceTree = "<group>"; };
+		1870D589203B41C90041EF53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		180D65F6203A0B9300661157 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1870D582203B41C90041EF53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				180D65FB203A0B9300661157 /* Lifespan 2018 */,
+				1870D586203B41C90041EF53 /* LifeClockTests */,
 				180D65FA203A0B9300661157 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				180D65F9203A0B9300661157 /* Lifespan 2018.app */,
+				1870D585203B41C90041EF53 /* LifeClockTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +92,15 @@
 				1870D57F203B3BBE0041EF53 /* LifeClock.swift */,
 			);
 			path = "Lifespan 2018";
+			sourceTree = "<group>";
+		};
+		1870D586203B41C90041EF53 /* LifeClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				1870D587203B41C90041EF53 /* LifeClockTests.swift */,
+				1870D589203B41C90041EF53 /* Info.plist */,
+			);
+			path = LifeClockTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +123,24 @@
 			productReference = 180D65F9203A0B9300661157 /* Lifespan 2018.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1870D584203B41C90041EF53 /* LifeClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1870D58C203B41C90041EF53 /* Build configuration list for PBXNativeTarget "LifeClockTests" */;
+			buildPhases = (
+				1870D581203B41C90041EF53 /* Sources */,
+				1870D582203B41C90041EF53 /* Frameworks */,
+				1870D583203B41C90041EF53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1870D58B203B41C90041EF53 /* PBXTargetDependency */,
+			);
+			name = LifeClockTests;
+			productName = LifeClockTests;
+			productReference = 1870D585203B41C90041EF53 /* LifeClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -103,6 +154,11 @@
 					180D65F8203A0B9300661157 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					1870D584203B41C90041EF53 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 180D65F8203A0B9300661157;
 					};
 				};
 			};
@@ -120,6 +176,7 @@
 			projectRoot = "";
 			targets = (
 				180D65F8203A0B9300661157 /* Lifespan 2018 */,
+				1870D584203B41C90041EF53 /* LifeClockTests */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +189,13 @@
 				180D6607203A0B9300661157 /* LaunchScreen.storyboard in Resources */,
 				180D6604203A0B9300661157 /* Assets.xcassets in Resources */,
 				180D6602203A0B9300661157 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1870D583203B41C90041EF53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +213,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1870D581203B41C90041EF53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1870D58F203B41CC0041EF53 /* LifeClock.swift in Sources */,
+				1870D588203B41C90041EF53 /* LifeClockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1870D58B203B41C90041EF53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 180D65F8203A0B9300661157 /* Lifespan 2018 */;
+			targetProxy = 1870D58A203B41C90041EF53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		180D6600203A0B9300661157 /* Main.storyboard */ = {
@@ -308,6 +389,38 @@
 			};
 			name = Release;
 		};
+		1870D58D203B41C90041EF53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZ7SMYA7GB;
+				INFOPLIST_FILE = LifeClockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Epic-Loot.LifeClockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lifespan 2018.app/Lifespan 2018";
+			};
+			name = Debug;
+		};
+		1870D58E203B41C90041EF53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZ7SMYA7GB;
+				INFOPLIST_FILE = LifeClockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Epic-Loot.LifeClockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lifespan 2018.app/Lifespan 2018";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -325,6 +438,15 @@
 			buildConfigurations = (
 				180D660C203A0B9300661157 /* Debug */,
 				180D660D203A0B9300661157 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1870D58C203B41C90041EF53 /* Build configuration list for PBXNativeTarget "LifeClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1870D58D203B41C90041EF53 /* Debug */,
+				1870D58E203B41C90041EF53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

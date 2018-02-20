@@ -7,14 +7,60 @@
 //
 
 import Foundation
+import CoreGraphics
+
 
 /// Model of a 12 hour analog clock with hour, minute, and second hands.
-/// The hour hand rotates 360 degrees in 720 minutes. 360/720 = 0.5 degrees/minute.
-/// The minute hand rotates 360 degrees in 60 minutes. 360/60 = 6.0 degrees/minute.
-/// The second hand rotates 360 degrees in 1 minute. 360/1 = 1.0 degrees/minute.
-/// Equation for hour hand angle (degrees):   0.5 x ((60 x Hours) + Minutes).
-/// Equation for minute hand angel (degrees): 6.0 x Minutes.
-/// Equation for second hand angel (degrees): 1.0 x Minutes.
+/// Angular velocity, ω, of each hand:
+/// Second hand: ωs = 360° per minute = 6° per second.
+/// Minute hand: ωm = 360° per hour = 6° per minute = 0.1° per second.
+/// Hour hand: ωh = 360° per 12 hours = 30° per hour = 0.5° per minute.
+/// https://sites.google.com/site/mymathclassroom/trigonometry/clock-angle-problems/clock-angle-problems-involving-second-hands
 class LifeClock {
+    
+    var time: Date
+    
+    var hourHandAngle: CGFloat {
+        get {
+            let hour = Calendar.current.component(.hour, from: time)
+            let minutes = Calendar.current.component(.minute, from: time)
+            return 0.5 * CGFloat((60 * hour) * minutes)
+        }
+    }
+    var minuteHandAngle: CGFloat {
+        get {
+            let minutes = Calendar.current.component(.minute, from: time)
+            let seconds = Calendar.current.component(.second, from: time)
+            return 0.1 * CGFloat(minutes * seconds)
+        }
+    }
+    
+    var secondHandAngle: CGFloat {
+        get {
+            let seconds = Calendar.current.component(.second, from: time)
+            return 6.0 * CGFloat(seconds)
+        }
+    }
+    
+    
+    /// Inits a LifeClock object with the time in a Date
+    ///
+    /// - Parameter time: Date that contains the time to model as a clock
+    init(time: Date) {
+        self.time = time
+    }
+    
+    
+    /// Transforms a string into a Date object. Time zone dozen matter as this
+    /// is for mapping a lifespan to the hands of an analog clock.
+    ///
+    /// - Parameter dateString: dd-mm-yyyy
+    /// - Returns: Date based on dd-mm-yyyy
+    static func stringToDate(dateString: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-mm-yyyy"
+        formatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
+        return formatter.date(from: dateString)
+    }
     
 }
