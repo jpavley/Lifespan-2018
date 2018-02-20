@@ -32,7 +32,7 @@ class LifeClock {
         get {
             let minutes = Calendar.current.component(.minute, from: time)
             let seconds = Calendar.current.component(.second, from: time)
-            return 0.1 * CGFloat(minutes * seconds)
+            return 0.1 * CGFloat(minutes + seconds)
         }
     }
     

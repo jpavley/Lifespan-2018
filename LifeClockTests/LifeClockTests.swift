@@ -10,24 +10,35 @@ import XCTest
 
 class LifeClockTests: XCTestCase {
     
-    var testList = [String: CGFloat]()
+    struct AngleComponents {
+        let hour: CGFloat
+        let minute: CGFloat
+        let second: CGFloat
+        
+        init(_ hour: Double, _ minute: Double, _ second: Double) {
+            self.hour = CGFloat(hour)
+            self.minute = CGFloat(minute)
+            self.second = CGFloat(second)
+        }
+    }
+    var testList = [String: AngleComponents]()
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
-        testList["00:00:00"] = 0.0
-        testList["00:30:00"] = 15.0
-        testList["01:00:00"] = 30.0
-        testList["01:30:00"] = 45.0
-        testList["03:00:00"] = 90.0
-        testList["03:30:00"] = 105.0
-        testList["06:00:00"] = 180.0
-        testList["06:30:00"] = 195.0
-        testList["09:00:00"] = 270.0
-        testList["09:30:00"] = 285.0
-        testList["12:00:00"] = 0.0
-        testList["12:30:00"] = 15.0
+        testList["00:00:00"] = AngleComponents(0.0, 0.0, 0.0)
+        testList["00:30:00"] = AngleComponents(15.0, 90.0, 0.0)
+        testList["01:00:00"] = AngleComponents(30.0, 0.0, 0.0)
+        testList["01:30:00"] = AngleComponents(45.0, 90.0, 0.0)
+        testList["03:00:00"] = AngleComponents(90.0, 0.0, 0.0)
+        testList["03:30:00"] = AngleComponents(105.0, 90.0, 0.0)
+        testList["06:00:00"] = AngleComponents(180.0, 0.0, 0.0)
+        testList["06:30:00"] = AngleComponents(195.0, 90.0, 0.0)
+        testList["09:00:00"] = AngleComponents(270.0, 0.0, 0.0)
+        testList["09:30:00"] = AngleComponents(285.0, 90.0, 0.0)
+        testList["12:00:00"] = AngleComponents(0.0, 0.0, 0.0)
+        testList["12:30:00"] = AngleComponents(15.0, 90.0, 0.0)
 
 
     }
@@ -42,22 +53,40 @@ class LifeClockTests: XCTestCase {
         XCTAssertNotNil(lc)
     }
     
-    func testHourHandAngel() {
+    func testHourHandAngle() {
+        for (key, value) in testList {
+//            print("")
+//            print("= testing time \(key), angle \(value.hour)")
+            
+            let date = LifeClock.stringToDate(dateString: key)
+//            print("== date \(date!)")
+            
+            let lc = LifeClock(time: date!)
+            let hourHandAngle = lc.hourHandAngle
+//            print("== hourHandAngle \(hourHandAngle)")
+            
+            XCTAssertNotNil(hourHandAngle)
+            XCTAssertEqual(hourHandAngle, value.hour)
+        }
+    }
+    
+    func testMinuteHandAngle() {
         for (key, value) in testList {
             print("")
-            print("= testing time \(key), angle \(value)")
+            print("= testing time \(key), angle \(value.minute)")
             
             let date = LifeClock.stringToDate(dateString: key)
             print("== date \(date!)")
             
             let lc = LifeClock(time: date!)
-            let hourHandAngle = lc.hourHandAngle
-            print("== hourHandAngle \(hourHandAngle)")
+            let minuetHandAngle = lc.minuteHandAngle
+            print("== hourHandAngle \(minuetHandAngle)")
             
-            XCTAssertNotNil(hourHandAngle)
-            XCTAssertEqual(hourHandAngle, value)
+            XCTAssertNotNil(minuetHandAngle)
+            XCTAssertEqual(minuetHandAngle, value.minute)
         }
     }
+
 
     
 }
