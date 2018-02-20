@@ -10,9 +10,26 @@ import XCTest
 
 class LifeClockTests: XCTestCase {
     
+    var testList = [String: CGFloat]()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        testList["00:00:00"] = 0.0
+        testList["00:30:00"] = 15.0
+        testList["01:00:00"] = 30.0
+        testList["01:30:00"] = 45.0
+        testList["03:00:00"] = 90.0
+        testList["03:30:00"] = 105.0
+        testList["06:00:00"] = 180.0
+        testList["06:30:00"] = 195.0
+        testList["09:00:00"] = 270.0
+        testList["09:30:00"] = 285.0
+        testList["12:00:00"] = 0.0
+        testList["12:30:00"] = 15.0
+
+
     }
     
     override func tearDown() {
@@ -26,12 +43,20 @@ class LifeClockTests: XCTestCase {
     }
     
     func testHourHandAngel() {
-        let date = LifeClock.stringToDate(dateString: "01-01-2018")
-        print("date \(date!)")
-        let lc = LifeClock(time: date!)
-        let hourHandAngle = lc.hourHandAngle
-        XCTAssertNotNil(hourHandAngle)
-        print("hourHandAngle \(hourHandAngle)")
+        for (key, value) in testList {
+            print("")
+            print("= testing time \(key), angle \(value)")
+            
+            let date = LifeClock.stringToDate(dateString: key)
+            print("== date \(date!)")
+            
+            let lc = LifeClock(time: date!)
+            let hourHandAngle = lc.hourHandAngle
+            print("== hourHandAngle \(hourHandAngle)")
+            
+            XCTAssertNotNil(hourHandAngle)
+            XCTAssertEqual(hourHandAngle, value)
+        }
     }
 
     

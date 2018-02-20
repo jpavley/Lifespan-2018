@@ -24,7 +24,8 @@ class LifeClock {
         get {
             let hour = Calendar.current.component(.hour, from: time)
             let minutes = Calendar.current.component(.minute, from: time)
-            return 0.5 * CGFloat((60 * hour) * minutes)
+            let angle = 0.5 * CGFloat((60 * hour) + minutes)
+            return angle
         }
     }
     var minuteHandAngle: CGFloat {
@@ -51,15 +52,14 @@ class LifeClock {
     }
     
     
-    /// Transforms a string into a Date object. Time zone dozen matter as this
+    /// Transforms a string into a Date object. mm-dd-yyy doesn't matter
     /// is for mapping a lifespan to the hands of an analog clock.
     ///
-    /// - Parameter dateString: dd-mm-yyyy
-    /// - Returns: Date based on dd-mm-yyyy
+    /// - Parameter dateString: hh:mm:ss
+    /// - Returns: Date based on hh:mm:ss
     static func stringToDate(dateString: String) -> Date? {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd-mm-yyyy"
-        formatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
+        formatter.dateFormat = "hh:mm:ss"
         return formatter.date(from: dateString)
     }
     
