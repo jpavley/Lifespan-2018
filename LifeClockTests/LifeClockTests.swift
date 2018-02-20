@@ -27,8 +27,11 @@ class LifeClockTests: XCTestCase {
     
     func testHourHandAngel() {
         let date = LifeClock.stringToDate(dateString: "01-01-2018")
-        let lc = LifeClock(time: Date())
-        let hourHandAngel = lc.hourHandAngle
+        print("date \(date!)")
+        let lc = LifeClock(time: date!)
+        let hourHandAngle = lc.hourHandAngle
+        XCTAssertNotNil(hourHandAngle)
+        print("hourHandAngle \(hourHandAngle)")
     }
 
     
