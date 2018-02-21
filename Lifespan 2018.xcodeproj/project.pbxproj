@@ -16,6 +16,7 @@
 		1870D580203B3BBE0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
 		1870D588203B41C90041EF53 /* LifeClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D587203B41C90041EF53 /* LifeClockTests.swift */; };
 		1870D58F203B41CC0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
+		48356CF2203E1C430015CD47 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48356CF1203E1C430015CD47 /* ClockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		1870D585203B41C90041EF53 /* LifeClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1870D587203B41C90041EF53 /* LifeClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClockTests.swift; sourceTree = "<group>"; };
 		1870D589203B41C90041EF53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48356CF1203E1C430015CD47 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				180D6605203A0B9300661157 /* LaunchScreen.storyboard */,
 				180D6608203A0B9300661157 /* Info.plist */,
 				1870D57F203B3BBE0041EF53 /* LifeClock.swift */,
+				48356CF1203E1C430015CD47 /* ClockView.swift */,
 			);
 			path = "Lifespan 2018";
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				180D660F203A0BF500661157 /* BarView.swift in Sources */,
+				48356CF2203E1C430015CD47 /* ClockView.swift in Sources */,
 				180D65FF203A0B9300661157 /* ViewController.swift in Sources */,
 				1870D580203B3BBE0041EF53 /* LifeClock.swift in Sources */,
 				180D65FD203A0B9300661157 /* AppDelegate.swift in Sources */,

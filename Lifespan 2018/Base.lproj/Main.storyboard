@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,24 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-FG-6dh" userLabel="Ground">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-o0-ohQ" userLabel="Clock Face" customClass="ClockView" customModule="Lifespan_2018" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zWF-o0-ohQ" secondAttribute="height" multiplier="1:1" id="8en-jh-5O0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.9051594243385892" green="0.95970998705273891" blue="0.93155848134326324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" id="Vjy-Uj-lkn"/>
+                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="VrW-BF-xow"/>
+                                    <constraint firstAttribute="trailing" secondItem="zWF-o0-ohQ" secondAttribute="trailing" id="aqq-Ff-qXA"/>
+                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="uZc-JI-fxU"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNW-RT-BLt" userLabel="Topbar" customClass="BarView" customModule="Lifespan_2018" customModuleProvider="target">
                                 <rect key="frame" x="16" y="36" width="288" height="43.5"/>
