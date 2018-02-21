@@ -60,8 +60,8 @@ class LifeClock {
         self.time = time
     }
     
-    /// Transforms a string into a Date object. mm-dd-yyy doesn't matter
-    /// is for mapping a lifespan to the hands of an analog clock.
+    /// Transforms a string into a Date object. mm-dd-yyy doesn't matter.
+    /// It's mapping a lifespan to the hands of an analog clock.
     ///
     /// - Parameter dateString: hh:mm:ss
     /// - Returns: Date based on hh:mm:ss
