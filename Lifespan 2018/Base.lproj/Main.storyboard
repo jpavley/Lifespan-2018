@@ -20,7 +20,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-FG-6dh" userLabel="Ground">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" red="0.77690005317011712" green="0.83743780850000005" blue="0.80479850328211511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.9051594243385892" green="0.95970998705273891" blue="0.93155848134326324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNW-RT-BLt" userLabel="Topbar" customClass="BarView" customModule="Lifespan_2018" customModuleProvider="target">
                                 <rect key="frame" x="16" y="36" width="288" height="43.5"/>
