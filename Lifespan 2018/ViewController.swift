@@ -15,6 +15,15 @@ enum UserMode: String {
     case year = "year"
 }
 
+struct Identifiers {
+    static let clockGroundTag = 10
+    static let clockfaceView = 100
+    static let minuteHandTag = 200
+    static let hourHandTag = 300
+    static let secondHandTag = 400
+}
+
+
 class ViewController: UIViewController {
 
     // MARK:- Properties -
@@ -64,6 +73,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         updateUX()
+        
+        let hourHand = view.viewWithTag(Identifiers.hourHandTag) as! HourHandView
+        let minuteHand = view.viewWithTag(Identifiers.minuteHandTag) as! MinuteHandView
+        let secondHand = view.viewWithTag(Identifiers.secondHandTag) as! SecondHandView
+        
+        hourHand.angle = 30
+        minuteHand.angle = 90
+        secondHand.angle = 180
+
     }
     
     override func didReceiveMemoryWarning() {

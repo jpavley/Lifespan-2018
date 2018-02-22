@@ -19,10 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-FG-6dh" userLabel="Clock Ground">
+                            <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-FG-6dh" userLabel="Clock Ground">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-o0-ohQ" userLabel="Clock Face" customClass="ClockView" customModule="Lifespan_2018" customModuleProvider="target">
+                                    <view opaque="NO" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-o0-ohQ" userLabel="Clock Face" customClass="ClockView" customModule="Lifespan_2018" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="124" width="320" height="320"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -31,7 +31,7 @@
                                             <constraint firstAttribute="width" secondItem="zWF-o0-ohQ" secondAttribute="height" multiplier="1:1" id="8en-jh-5O0"/>
                                         </constraints>
                                     </view>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSH-T8-3tQ" userLabel="Minuet Hand" customClass="MinuteHandView" customModule="Lifespan_2018" customModuleProvider="target">
+                                    <view opaque="NO" tag="200" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSH-T8-3tQ" userLabel="Minuet Hand" customClass="MinuteHandView" customModule="Lifespan_2018" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="124" width="320" height="320"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -42,7 +42,7 @@
                                             <constraint firstAttribute="width" secondItem="ZSH-T8-3tQ" secondAttribute="height" multiplier="1:1" id="vul-By-bUi"/>
                                         </constraints>
                                     </view>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIt-ug-uy7" userLabel="Hour Hand" customClass="HourHandView" customModule="Lifespan_2018" customModuleProvider="target">
+                                    <view opaque="NO" tag="300" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIt-ug-uy7" userLabel="Hour Hand" customClass="HourHandView" customModule="Lifespan_2018" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="124" width="320" height="320"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -56,7 +56,7 @@
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="b16-4v-DFG"/>
                                     </view>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-bL-gFb" userLabel="Second Hand" customClass="SecondHandView" customModule="Lifespan_2018" customModuleProvider="target">
+                                    <view opaque="NO" tag="400" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-bL-gFb" userLabel="Second Hand" customClass="SecondHandView" customModule="Lifespan_2018" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="124" width="320" height="320"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
