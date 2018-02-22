@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-FG-6dh" userLabel="Ground">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-FG-6dh" userLabel="Clock Ground">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-o0-ohQ" userLabel="Clock Face" customClass="ClockView" customModule="Lifespan_2018" customModuleProvider="target">
@@ -42,9 +42,25 @@
                                             <constraint firstAttribute="width" secondItem="ZSH-T8-3tQ" secondAttribute="height" multiplier="1:1" id="vul-By-bUi"/>
                                         </constraints>
                                     </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIt-ug-uy7" userLabel="Hour Hand" customClass="HourHandView" customModule="Lifespan_2018" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="NIt-ug-uy7" secondAttribute="height" multiplier="1:1" id="77b-vB-49c"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="AeB-8k-uYC"/>
+                                            <constraint firstAttribute="width" constant="320" id="AvE-4I-qqt"/>
+                                            <constraint firstAttribute="width" secondItem="NIt-ug-uy7" secondAttribute="height" multiplier="1:1" id="RuH-CQ-UCS"/>
+                                            <constraint firstAttribute="width" secondItem="NIt-ug-uy7" secondAttribute="height" multiplier="1:1" id="u7G-BH-5xg"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="b16-4v-DFG"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9051594243385892" green="0.95970998705273891" blue="0.93155848134326324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="NIt-ug-uy7" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="Dy5-0g-vud"/>
+                                    <constraint firstItem="NIt-ug-uy7" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="Ji2-3v-TWM"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" id="Vjy-Uj-lkn"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="VrW-BF-xow"/>
                                     <constraint firstAttribute="trailing" secondItem="zWF-o0-ohQ" secondAttribute="trailing" id="aqq-Ff-qXA"/>

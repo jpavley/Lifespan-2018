@@ -19,6 +19,7 @@
 		48356CF2203E1C430015CD47 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48356CF1203E1C430015CD47 /* ClockView.swift */; };
 		48356CF5203F48B40015CD47 /* MinuteHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48356CF4203F48B40015CD47 /* MinuteHandView.swift */; };
 		48356CF7203F5F4C0015CD47 /* CoreGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48356CF6203F5F4C0015CD47 /* CoreGraphicsView.swift */; };
+		489ABA3F203F699400227BFB /* HourHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489ABA3E203F699400227BFB /* HourHandView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		48356CF3203F40F50015CD47 /* lifeclock2.idraw */ = {isa = PBXFileReference; lastKnownFileType = file; path = lifeclock2.idraw; sourceTree = "<group>"; };
 		48356CF4203F48B40015CD47 /* MinuteHandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteHandView.swift; sourceTree = "<group>"; };
 		48356CF6203F5F4C0015CD47 /* CoreGraphicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsView.swift; sourceTree = "<group>"; };
+		489ABA3E203F699400227BFB /* HourHandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourHandView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				48356CF6203F5F4C0015CD47 /* CoreGraphicsView.swift */,
 				48356CF4203F48B40015CD47 /* MinuteHandView.swift */,
+				489ABA3E203F699400227BFB /* HourHandView.swift */,
 				48356CF1203E1C430015CD47 /* ClockView.swift */,
 			);
 			path = CoreGraphicsView;
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48356CF7203F5F4C0015CD47 /* CoreGraphicsView.swift in Sources */,
+				489ABA3F203F699400227BFB /* HourHandView.swift in Sources */,
 				180D660F203A0BF500661157 /* BarView.swift in Sources */,
 				48356CF5203F48B40015CD47 /* MinuteHandView.swift in Sources */,
 				48356CF2203E1C430015CD47 /* ClockView.swift in Sources */,
