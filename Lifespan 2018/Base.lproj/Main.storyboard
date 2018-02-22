@@ -31,12 +31,25 @@
                                             <constraint firstAttribute="width" secondItem="zWF-o0-ohQ" secondAttribute="height" multiplier="1:1" id="8en-jh-5O0"/>
                                         </constraints>
                                     </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSH-T8-3tQ" userLabel="Minuet Hand" customClass="MinuteHandView" customModule="Lifespan_2018" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZSH-T8-3tQ" secondAttribute="height" multiplier="1:1" id="8g8-Dm-PZd"/>
+                                            <constraint firstAttribute="width" constant="320" id="a9h-SQ-4Re"/>
+                                            <constraint firstAttribute="width" secondItem="ZSH-T8-3tQ" secondAttribute="height" multiplier="1:1" id="vul-By-bUi"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9051594243385892" green="0.95970998705273891" blue="0.93155848134326324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" id="Vjy-Uj-lkn"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="VrW-BF-xow"/>
                                     <constraint firstAttribute="trailing" secondItem="zWF-o0-ohQ" secondAttribute="trailing" id="aqq-Ff-qXA"/>
+                                    <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="fqr-Ug-pvj"/>
+                                    <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="mXe-JJ-lzx"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="uZc-JI-fxU"/>
                                 </constraints>
                             </view>
