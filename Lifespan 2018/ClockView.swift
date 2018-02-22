@@ -12,7 +12,9 @@ class ClockView: UIView {
     
     let canvasSize: CGFloat = 640.0
     
-    func calcScaleFactor(viewWidth: CGFloat) -> CGFloat {
+    
+    
+    private func calcScaleFactor(viewWidth: CGFloat) -> CGFloat {
         let scaleFactor: CGFloat = viewWidth/canvasSize
         return scaleFactor
     }
@@ -20,44 +22,88 @@ class ClockView: UIView {
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
-        // Drawing code
+        
+        // Must be called in the following sequence:
+        // drawFace(), drawMinuetHand(), darwHourHand(), drawSecondHand()
         
         drawFace()
         drawMinuteHand()
         drawHourHand()
         drawSecondHand()
+        drawKnob()
         
     }
+    
+    private func drawKnob() {
+        guard let ctx = UIGraphicsGetCurrentContext() else { return }
+        // enable the following lines for flipped coordinate systems
+        // ctx.translateBy(x: 0, y: self.bounds.size.height)
+        // ctx.scaleBy(x: 1, y: -1)
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
         
-    func drawSecondHand() {
+        // let scaleFactor: CGFloat = 1
+        // ctx.scaleBy(x: scaleFactor, y: scaleFactor)
+        
+        /*  Shape   */
+        let pathRef = CGMutablePath()
+        pathRef.move(to: CGPoint(x: 320, y: 331.724))
+        pathRef.addCurve(to: CGPoint(x: 308.276, y: 320), control1: CGPoint(x: 313.525, y: 331.724), control2: CGPoint(x: 308.276, y: 326.475))
+        pathRef.addCurve(to: CGPoint(x: 320, y: 308.276), control1: CGPoint(x: 308.276, y: 313.525), control2: CGPoint(x: 313.525, y: 308.276))
+        pathRef.addCurve(to: CGPoint(x: 331.724, y: 320), control1: CGPoint(x: 326.475, y: 308.276), control2: CGPoint(x: 331.724, y: 313.525))
+        pathRef.addCurve(to: CGPoint(x: 320, y: 331.724), control1: CGPoint(x: 331.724, y: 326.475), control2: CGPoint(x: 326.475, y: 331.724))
+        pathRef.closeSubpath()
+        
+        /*  Gradient Fill  */
+        ctx.saveGState()
+        ctx.addPath(pathRef)
+        ctx.clip()
+        
+        let gradientColors: [CGFloat] = [
+            0.933, 0.933, 0.933, 1,
+            0.318, 0.318, 0.318, 1]
+        let gradientLocations: [CGFloat] = [0, 1]
+        
+        guard let gradientRef = CGGradient(colorSpace: colorSpace, colorComponents: gradientColors, locations: gradientLocations, count: 2) else { return }
+        ctx.drawLinearGradient(gradientRef, start: CGPoint(x: 312.21, y: 312.21), end: CGPoint(x: 328.79, y: 328.79), options: [.drawsBeforeStartLocation, .drawsAfterEndLocation])
+        ctx.restoreGState()
+        
+        ctx.setLineWidth(4)
+        ctx.setStrokeColor(red: 0, green: 0, blue: 0, alpha: 1)
+        ctx.addPath(pathRef)
+        ctx.strokePath()
+        
+
+    }
+    
+    private func drawSecondHand() {
         guard let ctx = UIGraphicsGetCurrentContext() else { return }
         // enable the following lines for flipped coordinate systems
         // ctx.translateBy(x: 0, y: self.bounds.size.height)
         // ctx.scaleBy(x: 1, y: -1)
         
         /*  Shape   */
-        let pathRef = CGMutablePath()
-        pathRef.move(to: CGPoint(x: 314.679, y: 367.873))
-        pathRef.addCurve(to: CGPoint(x: 314.679, y: 329.796), control1: CGPoint(x: 314.679, y: 367.873), control2: CGPoint(x: 314.679, y: 329.796))
-        pathRef.addCurve(to: CGPoint(x: 318.226, y: 323.45), control1: CGPoint(x: 314.679, y: 329.796), control2: CGPoint(x: 318.226, y: 323.45))
-        pathRef.addCurve(to: CGPoint(x: 318.226, y: 317.104), control1: CGPoint(x: 318.226, y: 323.45), control2: CGPoint(x: 318.226, y: 317.104))
-        pathRef.addCurve(to: CGPoint(x: 314.679, y: 310.758), control1: CGPoint(x: 318.226, y: 317.104), control2: CGPoint(x: 314.679, y: 310.758))
-        pathRef.addCurve(to: CGPoint(x: 318.226, y: 158.449), control1: CGPoint(x: 314.679, y: 310.758), control2: CGPoint(x: 318.226, y: 158.449))
-        pathRef.addCurve(to: CGPoint(x: 321.774, y: 158.449), control1: CGPoint(x: 318.226, y: 158.449), control2: CGPoint(x: 321.774, y: 158.449))
-        pathRef.addCurve(to: CGPoint(x: 325.321, y: 310.758), control1: CGPoint(x: 321.774, y: 158.449), control2: CGPoint(x: 325.321, y: 310.758))
-        pathRef.addCurve(to: CGPoint(x: 321.774, y: 317.104), control1: CGPoint(x: 325.321, y: 310.758), control2: CGPoint(x: 321.774, y: 317.104))
-        pathRef.addCurve(to: CGPoint(x: 321.774, y: 323.45), control1: CGPoint(x: 321.774, y: 317.104), control2: CGPoint(x: 321.774, y: 323.45))
-        pathRef.addCurve(to: CGPoint(x: 325.321, y: 329.796), control1: CGPoint(x: 321.774, y: 323.45), control2: CGPoint(x: 325.321, y: 329.796))
-        pathRef.addCurve(to: CGPoint(x: 325.321, y: 367.873), control1: CGPoint(x: 325.321, y: 329.796), control2: CGPoint(x: 325.321, y: 367.873))
-        pathRef.addCurve(to: CGPoint(x: 314.679, y: 367.873), control1: CGPoint(x: 325.321, y: 367.873), control2: CGPoint(x: 314.679, y: 367.873))
-        pathRef.closeSubpath()
+        let secondHandPathRef = CGMutablePath()
+        secondHandPathRef.move(to: CGPoint(x: 314.679, y: 367.873))
+        secondHandPathRef.addCurve(to: CGPoint(x: 314.679, y: 329.796), control1: CGPoint(x: 314.679, y: 367.873), control2: CGPoint(x: 314.679, y: 329.796))
+        secondHandPathRef.addCurve(to: CGPoint(x: 318.226, y: 323.45), control1: CGPoint(x: 314.679, y: 329.796), control2: CGPoint(x: 318.226, y: 323.45))
+        secondHandPathRef.addCurve(to: CGPoint(x: 318.226, y: 317.104), control1: CGPoint(x: 318.226, y: 323.45), control2: CGPoint(x: 318.226, y: 317.104))
+        secondHandPathRef.addCurve(to: CGPoint(x: 314.679, y: 310.758), control1: CGPoint(x: 318.226, y: 317.104), control2: CGPoint(x: 314.679, y: 310.758))
+        secondHandPathRef.addCurve(to: CGPoint(x: 318.226, y: 158.449), control1: CGPoint(x: 314.679, y: 310.758), control2: CGPoint(x: 318.226, y: 158.449))
+        secondHandPathRef.addCurve(to: CGPoint(x: 321.774, y: 158.449), control1: CGPoint(x: 318.226, y: 158.449), control2: CGPoint(x: 321.774, y: 158.449))
+        secondHandPathRef.addCurve(to: CGPoint(x: 325.321, y: 310.758), control1: CGPoint(x: 321.774, y: 158.449), control2: CGPoint(x: 325.321, y: 310.758))
+        secondHandPathRef.addCurve(to: CGPoint(x: 321.774, y: 317.104), control1: CGPoint(x: 325.321, y: 310.758), control2: CGPoint(x: 321.774, y: 317.104))
+        secondHandPathRef.addCurve(to: CGPoint(x: 321.774, y: 323.45), control1: CGPoint(x: 321.774, y: 317.104), control2: CGPoint(x: 321.774, y: 323.45))
+        secondHandPathRef.addCurve(to: CGPoint(x: 325.321, y: 329.796), control1: CGPoint(x: 321.774, y: 323.45), control2: CGPoint(x: 325.321, y: 329.796))
+        secondHandPathRef.addCurve(to: CGPoint(x: 325.321, y: 367.873), control1: CGPoint(x: 325.321, y: 329.796), control2: CGPoint(x: 325.321, y: 367.873))
+        secondHandPathRef.addCurve(to: CGPoint(x: 314.679, y: 367.873), control1: CGPoint(x: 325.321, y: 367.873), control2: CGPoint(x: 314.679, y: 367.873))
+        secondHandPathRef.closeSubpath()
         
         ctx.setFillColor(red: 0.671, green: 0.082, blue: 0, alpha: 1)
-        ctx.addPath(pathRef)
+        ctx.addPath(secondHandPathRef)
         ctx.fillPath()
     }
     
-    func drawHourHand() {
+    private func drawHourHand() {
         guard let ctx = UIGraphicsGetCurrentContext() else { return }
         // enable the following lines for flipped coordinate systems
         // ctx.translateBy(x: 0, y: self.bounds.size.height)
@@ -86,7 +132,7 @@ class ClockView: UIView {
         
     }
     
-    func drawMinuteHand() {
+    private func drawMinuteHand() {
         guard let ctx = UIGraphicsGetCurrentContext() else { return }
         // enable the following lines for flipped coordinate systems
         // ctx.translateBy(x: 0, y: self.bounds.size.height)
