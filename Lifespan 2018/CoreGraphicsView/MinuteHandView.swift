@@ -8,48 +8,18 @@
 
 import UIKit
 
-extension FloatingPoint {
-    var degreesToRadians: Self {
-        return self * .pi / 180
-        
-    }
-    var radiansToDegrees: Self {
-        return self * 180 / .pi
-    }
-}
-
-class MinuteHandView: UIView {
-    
-    // MARK:- Properties -
-    
-    /// On the main storyboard the clock view is 640 x 640.
-    let canvasSize: CGFloat = 640.0
+class MinuteHandView: CoreGraphicsView {
     
     // Need to animate the second, hour, and minuet hand independently
     
     let minuteHandPathRef = CGMutablePath()
     
-    // MARK:- Helper Functions -
-    
-    // MARK:- Helper Functions -
-    
-    private func calcScaleFactor(viewWidth: CGFloat) -> CGFloat {
-        let scaleFactor: CGFloat = viewWidth/canvasSize
-        return scaleFactor
-    }
-
-        
-    // MARK:- Drawing Code -
-    
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         
-        // Must be called in the following sequence:
-        // drawFace(), drawMinuetHand(), darwHourHand(), drawSecondHand()
-        
         drawMinuteHand()
-        self.transform = CGAffineTransform(rotationAngle: CGFloat(90).degreesToRadians)
+        self.transform = CGAffineTransform(rotationAngle: CGFloat(angle).degreesToRadians)
         
     }
     
@@ -83,10 +53,4 @@ class MinuteHandView: UIView {
         ctx.fillPath()
         
     }
-    
-    
-
-
-    
-
 }

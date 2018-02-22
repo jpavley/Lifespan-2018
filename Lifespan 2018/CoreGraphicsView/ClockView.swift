@@ -8,27 +8,13 @@
 
 import UIKit
 
-class ClockView: UIView {
-    
-    // MARK:- Properties -
-    
-    /// On the main storyboard the clock view is 640 x 640.
-    let canvasSize: CGFloat = 640.0
+class ClockView: CoreGraphicsView {
     
     // Need to animate the second, hour, and minuet hand independently
     
     let secondHandPathRef = CGMutablePath()
     let hourHandPathRef = CGMutablePath()
-    
-    // MARK:- Helper Functions -
-    
-    private func calcScaleFactor(viewWidth: CGFloat) -> CGFloat {
-        let scaleFactor: CGFloat = viewWidth/canvasSize
-        return scaleFactor
-    }
-    
-    // MARK:- Drawing Code -
-    
+        
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
