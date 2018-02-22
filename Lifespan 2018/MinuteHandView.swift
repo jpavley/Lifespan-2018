@@ -8,6 +8,16 @@
 
 import UIKit
 
+extension FloatingPoint {
+    var degreesToRadians: Self {
+        return self * .pi / 180
+        
+    }
+    var radiansToDegrees: Self {
+        return self * 180 / .pi
+    }
+}
+
 class MinuteHandView: UIView {
     
     // MARK:- Properties -
@@ -39,6 +49,7 @@ class MinuteHandView: UIView {
         // drawFace(), drawMinuetHand(), darwHourHand(), drawSecondHand()
         
         drawMinuteHand()
+        self.transform = CGAffineTransform(rotationAngle: CGFloat(90).degreesToRadians)
         
     }
     
