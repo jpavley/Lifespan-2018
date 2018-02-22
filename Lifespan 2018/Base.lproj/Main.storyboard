@@ -56,6 +56,22 @@
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="b16-4v-DFG"/>
                                     </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-bL-gFb" userLabel="Second Hand" customClass="SecondHandView" customModule="Lifespan_2018" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XGT-bL-gFb" secondAttribute="height" multiplier="1:1" id="12z-BI-GUZ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="7rB-pY-KfN"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="320" id="Gvs-Ti-gDL"/>
+                                            <constraint firstAttribute="width" secondItem="XGT-bL-gFb" secondAttribute="height" multiplier="1:1" id="VsP-x5-hRg"/>
+                                            <constraint firstAttribute="width" secondItem="XGT-bL-gFb" secondAttribute="height" multiplier="1:1" id="bBf-IJ-b9G"/>
+                                            <constraint firstAttribute="width" constant="320" id="m61-h1-eO5"/>
+                                            <constraint firstAttribute="width" secondItem="XGT-bL-gFb" secondAttribute="height" multiplier="1:1" id="z6i-zu-15h"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="SFP-ka-WAN"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9051594243385892" green="0.95970998705273891" blue="0.93155848134326324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -64,8 +80,10 @@
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" id="Vjy-Uj-lkn"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="VrW-BF-xow"/>
                                     <constraint firstAttribute="trailing" secondItem="zWF-o0-ohQ" secondAttribute="trailing" id="aqq-Ff-qXA"/>
+                                    <constraint firstItem="XGT-bL-gFb" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="dcx-rr-zDr"/>
                                     <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="fqr-Ug-pvj"/>
                                     <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="mXe-JJ-lzx"/>
+                                    <constraint firstItem="XGT-bL-gFb" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="pRB-m8-ze6"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="uZc-JI-fxU"/>
                                 </constraints>
                             </view>

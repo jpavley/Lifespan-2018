@@ -20,6 +20,7 @@
 		48356CF5203F48B40015CD47 /* MinuteHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48356CF4203F48B40015CD47 /* MinuteHandView.swift */; };
 		48356CF7203F5F4C0015CD47 /* CoreGraphicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48356CF6203F5F4C0015CD47 /* CoreGraphicsView.swift */; };
 		489ABA3F203F699400227BFB /* HourHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489ABA3E203F699400227BFB /* HourHandView.swift */; };
+		489ABA41203F6D2500227BFB /* SecondHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489ABA40203F6D2500227BFB /* SecondHandView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		48356CF4203F48B40015CD47 /* MinuteHandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteHandView.swift; sourceTree = "<group>"; };
 		48356CF6203F5F4C0015CD47 /* CoreGraphicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsView.swift; sourceTree = "<group>"; };
 		489ABA3E203F699400227BFB /* HourHandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourHandView.swift; sourceTree = "<group>"; };
+		489ABA40203F6D2500227BFB /* SecondHandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondHandView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				48356CF6203F5F4C0015CD47 /* CoreGraphicsView.swift */,
 				48356CF4203F48B40015CD47 /* MinuteHandView.swift */,
 				489ABA3E203F699400227BFB /* HourHandView.swift */,
+				489ABA40203F6D2500227BFB /* SecondHandView.swift */,
 				48356CF1203E1C430015CD47 /* ClockView.swift */,
 			);
 			path = CoreGraphicsView;
@@ -235,6 +238,7 @@
 				48356CF2203E1C430015CD47 /* ClockView.swift in Sources */,
 				180D65FF203A0B9300661157 /* ViewController.swift in Sources */,
 				1870D580203B3BBE0041EF53 /* LifeClock.swift in Sources */,
+				489ABA41203F6D2500227BFB /* SecondHandView.swift in Sources */,
 				180D65FD203A0B9300661157 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
