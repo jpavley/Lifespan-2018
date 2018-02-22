@@ -25,7 +25,36 @@ class ClockView: UIView {
         drawFace()
         drawMinuteHand()
         drawHourHand()
+        drawSecondHand()
         
+    }
+        
+    func drawSecondHand() {
+        guard let ctx = UIGraphicsGetCurrentContext() else { return }
+        // enable the following lines for flipped coordinate systems
+        // ctx.translateBy(x: 0, y: self.bounds.size.height)
+        // ctx.scaleBy(x: 1, y: -1)
+        
+        /*  Shape   */
+        let pathRef = CGMutablePath()
+        pathRef.move(to: CGPoint(x: 314.679, y: 367.873))
+        pathRef.addCurve(to: CGPoint(x: 314.679, y: 329.796), control1: CGPoint(x: 314.679, y: 367.873), control2: CGPoint(x: 314.679, y: 329.796))
+        pathRef.addCurve(to: CGPoint(x: 318.226, y: 323.45), control1: CGPoint(x: 314.679, y: 329.796), control2: CGPoint(x: 318.226, y: 323.45))
+        pathRef.addCurve(to: CGPoint(x: 318.226, y: 317.104), control1: CGPoint(x: 318.226, y: 323.45), control2: CGPoint(x: 318.226, y: 317.104))
+        pathRef.addCurve(to: CGPoint(x: 314.679, y: 310.758), control1: CGPoint(x: 318.226, y: 317.104), control2: CGPoint(x: 314.679, y: 310.758))
+        pathRef.addCurve(to: CGPoint(x: 318.226, y: 158.449), control1: CGPoint(x: 314.679, y: 310.758), control2: CGPoint(x: 318.226, y: 158.449))
+        pathRef.addCurve(to: CGPoint(x: 321.774, y: 158.449), control1: CGPoint(x: 318.226, y: 158.449), control2: CGPoint(x: 321.774, y: 158.449))
+        pathRef.addCurve(to: CGPoint(x: 325.321, y: 310.758), control1: CGPoint(x: 321.774, y: 158.449), control2: CGPoint(x: 325.321, y: 310.758))
+        pathRef.addCurve(to: CGPoint(x: 321.774, y: 317.104), control1: CGPoint(x: 325.321, y: 310.758), control2: CGPoint(x: 321.774, y: 317.104))
+        pathRef.addCurve(to: CGPoint(x: 321.774, y: 323.45), control1: CGPoint(x: 321.774, y: 317.104), control2: CGPoint(x: 321.774, y: 323.45))
+        pathRef.addCurve(to: CGPoint(x: 325.321, y: 329.796), control1: CGPoint(x: 321.774, y: 323.45), control2: CGPoint(x: 325.321, y: 329.796))
+        pathRef.addCurve(to: CGPoint(x: 325.321, y: 367.873), control1: CGPoint(x: 325.321, y: 329.796), control2: CGPoint(x: 325.321, y: 367.873))
+        pathRef.addCurve(to: CGPoint(x: 314.679, y: 367.873), control1: CGPoint(x: 325.321, y: 367.873), control2: CGPoint(x: 314.679, y: 367.873))
+        pathRef.closeSubpath()
+        
+        ctx.setFillColor(red: 0.671, green: 0.082, blue: 0, alpha: 1)
+        ctx.addPath(pathRef)
+        ctx.fillPath()
     }
     
     func drawHourHand() {
