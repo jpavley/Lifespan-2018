@@ -43,6 +43,7 @@
 		1870D587203B41C90041EF53 /* LifeClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClockTests.swift; sourceTree = "<group>"; };
 		1870D589203B41C90041EF53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48356CF1203E1C430015CD47 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		48356CF3203F40F50015CD47 /* lifeclock2.idraw */ = {isa = PBXFileReference; lastKnownFileType = file; path = lifeclock2.idraw; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 				180D6608203A0B9300661157 /* Info.plist */,
 				1870D57F203B3BBE0041EF53 /* LifeClock.swift */,
 				48356CF1203E1C430015CD47 /* ClockView.swift */,
+				48356CF3203F40F50015CD47 /* lifeclock2.idraw */,
 			);
 			path = "Lifespan 2018";
 			sourceTree = "<group>";
