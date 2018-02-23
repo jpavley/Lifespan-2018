@@ -65,6 +65,9 @@ class ViewController: UIViewController {
     func updateUX() {
         
         titleLabel.text = "\(name)'s life in a \(mode.rawValue)".capitalized
+        
+        let clockGround = view.viewWithTag(Identifiers.clockGroundTag)
+        clockGround!.isHidden = mode != .day
     }
     
     // MARK:- Overrides -
@@ -74,13 +77,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         updateUX()
         
+        let lifeClock = LifeClock(time: Date())
+        
         let hourHand = view.viewWithTag(Identifiers.hourHandTag) as! HourHandView
         let minuteHand = view.viewWithTag(Identifiers.minuteHandTag) as! MinuteHandView
         let secondHand = view.viewWithTag(Identifiers.secondHandTag) as! SecondHandView
         
-        hourHand.angle = 30
-        minuteHand.angle = 90
-        secondHand.angle = 180
+        hourHand.angle = lifeClock.hourHandAngle
+        minuteHand.angle = lifeClock.minuteHandAngle
+        secondHand.angle = lifeClock.secondHandAngle
 
     }
     
