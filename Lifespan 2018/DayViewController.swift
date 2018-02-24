@@ -23,7 +23,7 @@ struct Identifiers {
     static let secondHandTag = 400
 }
 
-class ViewController: UIViewController {
+class DayViewController: UIViewController {
 
     // MARK:- Properties -
     
