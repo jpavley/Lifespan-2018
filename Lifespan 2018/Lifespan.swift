@@ -18,6 +18,15 @@ struct LifeEvent {
     var date: Date
 }
 
+extension CGFloat {
+    var divisor: CGFloat {
+        return self.rounded(.down)
+    }
+    var remainder: CGFloat {
+        return self - self.divisor
+    }
+}
+
 class Lifespan {
     var name: String?
     var birth: LifeEvent?
@@ -41,13 +50,35 @@ class Lifespan {
             return nil
         }
         
+        // Algorithm: Calc remaining lifespan as clock time
+        // 1. age = thisYear - birthYear
+        // 2. percentOfLifeSpent = age/expectedLifespan
+        // 3. timeSpent = 12 * percentOfLifeSpent
+        // 4. hourHandValue = timeSpent divisor
+        // 5. minutesSpent = 60 * timeSpent remainder
+        // 6. minuteHandValue = minutesSpent divisor
+        // 7. secondHandValue = 60 * minutesSpent remainder
+        
         let birthYear = CGFloat(Calendar.current.component(.year, from: b.date))
         let thisYear = CGFloat(Calendar.current.component(.year, from: Date()))
-        let age = thisYear - birthYear
-        let percentLifeSpent = age / ale
-        print(percentLifeSpent)
         
-        return Date()
+        let age = thisYear - birthYear
+        let percentOfLifeSpent = age/ale
+        
+        let timeSpent = 12 * percentOfLifeSpent
+        
+        let hourHandValue = Int(timeSpent.divisor)
+        let hoursRemainder = timeSpent.remainder
+        
+        let minutesSpent = 60 * hoursRemainder
+        let minuteHandValue = Int(minutesSpent.divisor)
+
+        let secondsSpent = 60 * minutesSpent.remainder
+        let secondHandValue = Int(secondsSpent.divisor)
+        
+        let dateString = "\(hourHandValue):\(minuteHandValue):\(secondHandValue)"
+        
+        return LifeClock.stringToDate(dateString: dateString)
     }
     
     /// Transforms a string into a Date object.

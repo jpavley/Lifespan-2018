@@ -49,7 +49,7 @@ class LifeSpanTests: XCTestCase {
         let ls = Lifespan(name: "John", dateOfBirth: birthDate!, averageLifeExpectancy: 82.8)
         
         let spanTime = ls.lifespanAsTime()
-        let expectedTime = LifeClock.stringToDate(dateString: "07:47:44")
+        let expectedTime = LifeClock.stringToDate(dateString: "08:15:39")
         XCTAssertTrue(spanTime == expectedTime)
     }
 }
