@@ -39,13 +39,17 @@ class LifeSpanTests: XCTestCase {
     
     func testLifespanClass() {
         let birthDate = Lifespan.stringToDate(dateString: "02-13-1961")
-        print("birthDate! \(birthDate!)")
         let ls = Lifespan(name: "John", dateOfBirth: birthDate!, averageLifeExpectancy: 82.8)
         
         XCTAssertNotNil(ls)
     }
     
-    
-    
-    
+    func testLifespanAsTime() {
+        let birthDate = Lifespan.stringToDate(dateString: "02-13-1961")
+        let ls = Lifespan(name: "John", dateOfBirth: birthDate!, averageLifeExpectancy: 82.8)
+        
+        let spanTime = ls.lifespanAsTime()
+        let expectedTime = LifeClock.stringToDate(dateString: "07:47:44")
+        XCTAssertTrue(spanTime == expectedTime)
+    }
 }
