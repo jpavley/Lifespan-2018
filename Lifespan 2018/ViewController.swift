@@ -41,6 +41,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var clockCaption: UILabel!
     @IBOutlet weak var clockKey: UILabel!
     
+    @IBOutlet weak var dayButton: UIButton!
+    @IBOutlet weak var weekButton: UIButton!
+    @IBOutlet weak var monthButton: UIButton!
+    @IBOutlet weak var yearButton: UIButton!
+    
     // MARK:- Actions -
     
     @IBAction func optionsAction(_ sender: Any) {
@@ -74,19 +79,48 @@ class ViewController: UIViewController {
         
         let clockGround = view.viewWithTag(Identifiers.clockGroundTag)
         
+        resetAllBarButtonColors()
+        
         switch mode {
+            
         case .day:
             clockGround!.isHidden = false
             updateLifeClock()
             clockCaption.text = lifeSpan.clockDescription
             clockKey.text = lifeSpan.clockKey
+            dayButton.backgroundColor = UIColor(named: "Barselected")
+            dayButton.setTitleColor(UIColor(named:"Barbackground"), for: .normal)
+            
         case .week:
             clockGround!.isHidden = true
+            weekButton.backgroundColor = UIColor(named: "Barselected")
+            weekButton.setTitleColor(UIColor(named:"Barbackground"), for: .normal)
+            
         case .month:
             clockGround!.isHidden = true
+            monthButton.backgroundColor = UIColor(named: "Barselected")
+            monthButton.setTitleColor(UIColor(named:"Barbackground"), for: .normal)
+            
         case .year:
             clockGround!.isHidden = true
+            yearButton.backgroundColor = UIColor(named: "Barselected")
+            yearButton.setTitleColor(UIColor(named:"Barbackground"), for: .normal)
         }
+    }
+    
+    fileprivate func resetAllBarButtonColors() {
+        dayButton.backgroundColor = UIColor(named: "Barbackground")
+        dayButton.setTitleColor(UIColor(named:"Barforeground"), for: .normal)
+        
+        weekButton.backgroundColor = UIColor(named: "Barbackground")
+        weekButton.setTitleColor(UIColor(named:"Barforeground"), for: .normal)
+
+        monthButton.backgroundColor = UIColor(named: "Barbackground")
+        monthButton.setTitleColor(UIColor(named:"Barforeground"), for: .normal)
+        
+        yearButton.backgroundColor = UIColor(named: "Barbackground")
+        yearButton.setTitleColor(UIColor(named:"Barforeground"), for: .normal)
+
     }
     
     // MARK:- Overrides -

@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -159,8 +160,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1g9-Zj-6Tq">
                                                 <rect key="frame" x="0.0" y="0.0" width="68" height="30"/>
+                                                <color key="backgroundColor" name="Barselected"/>
                                                 <state key="normal" title="Day">
-                                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="Barbackground"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="dayAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fpy-tM-mOx"/>
@@ -169,7 +171,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8J-m6-3S1">
                                                 <rect key="frame" x="68" y="0.0" width="68" height="30"/>
                                                 <state key="normal" title="Week">
-                                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="Barforeground"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="weekAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLx-4m-wZF"/>
@@ -178,7 +180,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dza-9V-PsK">
                                                 <rect key="frame" x="136" y="0.0" width="68" height="30"/>
                                                 <state key="normal" title="Month">
-                                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="Barforeground"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="monthAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lrH-4C-ZXm"/>
@@ -187,7 +189,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72Q-2a-s6J">
                                                 <rect key="frame" x="204" y="0.0" width="68" height="30"/>
                                                 <state key="normal" title="Year">
-                                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" name="Barforeground"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="yearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cRy-ZA-kCN"/>
@@ -235,7 +237,11 @@
                     <connections>
                         <outlet property="clockCaption" destination="RBL-dc-su6" id="Xbd-tz-K9v"/>
                         <outlet property="clockKey" destination="6Yf-J2-x3D" id="n89-pc-IvJ"/>
+                        <outlet property="dayButton" destination="1g9-Zj-6Tq" id="fts-zI-JGT"/>
+                        <outlet property="monthButton" destination="dza-9V-PsK" id="4aL-5L-X5j"/>
                         <outlet property="titleLabel" destination="qkZ-qH-dii" id="GCq-QH-6jS"/>
+                        <outlet property="weekButton" destination="m8J-m6-3S1" id="aEO-QP-x88"/>
+                        <outlet property="yearButton" destination="72Q-2a-s6J" id="2E0-sK-fba"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -243,4 +249,15 @@
             <point key="canvasLocation" x="31.875" y="32.74647887323944"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Barbackground">
+            <color red="1" green="0.8320000171661377" blue="0.47299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Barforeground">
+            <color red="0.57899999618530273" green="0.32199999690055847" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Barselected">
+            <color red="1" green="0.57800000905990601" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
