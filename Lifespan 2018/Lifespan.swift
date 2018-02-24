@@ -28,11 +28,24 @@ extension CGFloat {
 }
 
 class Lifespan {
+    
     var name: String?
     var birth: LifeEvent?
     var death: LifeEvent?
     var lifeEvents: [Lifespan]?
     var averageLifeExpectancy: CGFloat?
+    
+    var hourHandValue = 0
+    var minuteHandValue = 0
+    var secondHandValue = 0
+    
+    var clockDescription: String {
+        let hoursRemaining = 12 - hourHandValue
+        let minutesRemaining = 60 - minuteHandValue
+        let secondsRemaining = 60 - secondHandValue
+        return "\(hoursRemaining) hours, \(minutesRemaining) mins, \(secondsRemaining) secs remaining"
+    }
+    
     
     init(name: String, dateOfBirth: Date, averageLifeExpectancy: CGFloat) {
         self.name = name
@@ -67,14 +80,14 @@ class Lifespan {
         
         let timeSpent = 12 * percentOfLifeSpent
         
-        let hourHandValue = Int(timeSpent.divisor)
+        hourHandValue = Int(timeSpent.divisor)
         let hoursRemainder = timeSpent.remainder
         
         let minutesSpent = 60 * hoursRemainder
-        let minuteHandValue = Int(minutesSpent.divisor)
+        minuteHandValue = Int(minutesSpent.divisor)
 
         let secondsSpent = 60 * minutesSpent.remainder
-        let secondHandValue = Int(secondsSpent.divisor)
+        secondHandValue = Int(secondsSpent.divisor)
         
         let dateString = "\(hourHandValue):\(minuteHandValue):\(secondHandValue)"
         

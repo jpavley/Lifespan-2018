@@ -32,9 +32,13 @@ class ViewController: UIViewController {
     var dob = "02-13-1961"
     var ale = CGFloat(82.9) // https://www.ssa.gov/planners/lifeexpectancy.html
     
+    var lifeSpan: Lifespan!
+    var lifeClock: LifeClock!
+    
     // MARK:- Outlets -
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var clockCaption: UILabel!
     
     // MARK:- Actions -
     
@@ -73,6 +77,7 @@ class ViewController: UIViewController {
         case .day:
             clockGround!.isHidden = false
             updateLifeClock()
+            clockCaption.text = lifeSpan.clockDescription
         case .week:
             clockGround!.isHidden = true
         case .month:
@@ -91,13 +96,13 @@ class ViewController: UIViewController {
     }
     
     fileprivate func updateLifeClock() {
-        let lifeClock = createLifeClockForUser()
+        lifeClock = createLifeClockForUser()
         setClock(with: lifeClock)
     }
     
     fileprivate func createLifeClockForUser() -> LifeClock {
         let birthDate = Lifespan.stringToDate(dateString: dob)
-        let lifeSpan = Lifespan(name: name, dateOfBirth: birthDate!, averageLifeExpectancy: ale)
+        lifeSpan = Lifespan(name: name, dateOfBirth: birthDate!, averageLifeExpectancy: ale)
         let spanTime = lifeSpan.lifespanAsTime()
         return LifeClock(time: spanTime!)
     }

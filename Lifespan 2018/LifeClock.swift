@@ -15,7 +15,13 @@ import CoreGraphics
 /// Minute hand: ωm = 360° per hour = 6° per minute = 0.1° per second.
 /// Hour hand: ωh = 360° per 12 hours = 30° per hour = 0.5° per minute = 0.00833333 per second.
 /// https://sites.google.com/site/mymathclassroom/trigonometry/clock-angle-problems/clock-angle-problems-involving-second-hands
-class LifeClock {
+class LifeClock: CustomStringConvertible {
+    
+    var description: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm:ss"
+        return formatter.string(from: time)
+    }
     
     var time: Date
     
