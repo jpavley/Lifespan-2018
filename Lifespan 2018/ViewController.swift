@@ -39,6 +39,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var clockCaption: UILabel!
+    @IBOutlet weak var clockKey: UILabel!
     
     // MARK:- Actions -
     
@@ -78,6 +79,7 @@ class ViewController: UIViewController {
             clockGround!.isHidden = false
             updateLifeClock()
             clockCaption.text = lifeSpan.clockDescription
+            clockKey.text = lifeSpan.clockKey
         case .week:
             clockGround!.isHidden = true
         case .month:

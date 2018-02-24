@@ -72,29 +72,39 @@
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="SFP-ka-WAN"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 hours, 15 mins, 39 secs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBL-dc-su6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 hours, 15 mins, 39 secs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBL-dc-su6">
+                                        <rect key="frame" x="17" y="95" width="286" height="21"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One hour ≅ 6.9 years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yf-J2-x3D">
                                         <rect key="frame" x="17" y="452" width="286" height="21"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9051594243385892" green="0.95970998705273891" blue="0.93155848134326324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="RBL-dc-su6" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="17" id="Cg4-uJ-JxY"/>
+                                    <constraint firstItem="RBL-dc-su6" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="17" id="7aU-mp-IcY"/>
                                     <constraint firstItem="NIt-ug-uy7" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="Dy5-0g-vud"/>
+                                    <constraint firstAttribute="trailing" secondItem="RBL-dc-su6" secondAttribute="trailing" constant="17" id="Fdq-ob-S6g"/>
                                     <constraint firstItem="NIt-ug-uy7" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="Ji2-3v-TWM"/>
-                                    <constraint firstAttribute="bottom" secondItem="RBL-dc-su6" secondAttribute="bottom" constant="95" id="M6u-Lr-pmb"/>
+                                    <constraint firstItem="RBL-dc-su6" firstAttribute="top" secondItem="mDl-FG-6dh" secondAttribute="top" constant="95" id="TlD-3A-iRv"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" id="Vjy-Uj-lkn"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="VrW-BF-xow"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Yf-J2-x3D" secondAttribute="bottom" constant="95" id="VxP-MB-xJN"/>
+                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="top" secondItem="RBL-dc-su6" secondAttribute="bottom" constant="8" id="YOe-d8-O0F"/>
                                     <constraint firstAttribute="trailing" secondItem="zWF-o0-ohQ" secondAttribute="trailing" id="aqq-Ff-qXA"/>
-                                    <constraint firstAttribute="trailing" secondItem="RBL-dc-su6" secondAttribute="trailing" constant="17" id="cjC-K3-Y0y"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Yf-J2-x3D" secondAttribute="trailing" constant="17" id="cIc-rv-3gH"/>
                                     <constraint firstItem="XGT-bL-gFb" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="dcx-rr-zDr"/>
+                                    <constraint firstItem="6Yf-J2-x3D" firstAttribute="top" secondItem="zWF-o0-ohQ" secondAttribute="bottom" constant="8" id="fOG-AS-DU7"/>
                                     <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="fqr-Ug-pvj"/>
                                     <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="mXe-JJ-lzx"/>
                                     <constraint firstItem="XGT-bL-gFb" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="pRB-m8-ze6"/>
-                                    <constraint firstItem="RBL-dc-su6" firstAttribute="top" secondItem="zWF-o0-ohQ" secondAttribute="bottom" constant="8" id="qRP-Pa-iRb"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="uZc-JI-fxU"/>
+                                    <constraint firstItem="6Yf-J2-x3D" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="17" id="ud1-CH-hpv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNW-RT-BLt" userLabel="Topbar" customClass="BarView" customModule="Lifespan_2018" customModuleProvider="target">
@@ -224,6 +234,7 @@
                     </view>
                     <connections>
                         <outlet property="clockCaption" destination="RBL-dc-su6" id="Xbd-tz-K9v"/>
+                        <outlet property="clockKey" destination="6Yf-J2-x3D" id="n89-pc-IvJ"/>
                         <outlet property="titleLabel" destination="qkZ-qH-dii" id="GCq-QH-6jS"/>
                     </connections>
                 </viewController>

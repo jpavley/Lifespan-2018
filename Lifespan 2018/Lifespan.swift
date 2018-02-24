@@ -43,7 +43,17 @@ class Lifespan {
         let hoursRemaining = 12 - hourHandValue
         let minutesRemaining = 60 - minuteHandValue
         let secondsRemaining = 60 - secondHandValue
-        return "\(hoursRemaining) hours, \(minutesRemaining) mins, \(secondsRemaining) secs remaining"
+        return "\(hoursRemaining) hrs, \(minutesRemaining) mins, \(secondsRemaining) secs remaining"
+    }
+    
+    var clockKey: String {
+        if let ale = averageLifeExpectancy {
+            let hourSpan = ale/12
+            let hourSpanString = String(format: "%.2f", hourSpan)
+            return "1.0 hour ≅ \(hourSpanString) years"
+        } else {
+            return ""
+        }
     }
     
     
