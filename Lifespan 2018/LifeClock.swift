@@ -66,6 +66,7 @@ class LifeClock {
     /// - Parameter dateString: hh:mm:ss
     /// - Returns: Date based on hh:mm:ss
     static func stringToDate(dateString: String) -> Date? {
+        // TODO: Rename function stringToTime
         let formatter = DateFormatter()
         formatter.dateFormat = "hh:mm:ss"
         return formatter.date(from: dateString)

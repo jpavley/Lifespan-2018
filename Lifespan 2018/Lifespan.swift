@@ -48,4 +48,15 @@ class Lifespan {
         
         return Date()
     }
+    
+    /// Transforms a string into a Date object.
+    ///
+    /// - Parameter dateString: mm-dd-yyy
+    /// - Returns: Date based on mm-dd-yyy
+    static func stringToDate(dateString: String) -> Date? {
+        // TODO: Rename function stringToTime
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy"
+        return formatter.date(from: dateString)
+    }
 }
