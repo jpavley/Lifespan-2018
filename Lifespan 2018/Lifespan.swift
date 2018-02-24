@@ -33,7 +33,8 @@ class Lifespan {
     
     /// Models lifespan as 12 hour half-day from noon to midnight.
     ///
-    /// - Returns: Current age as the time.
+    /// - Returns: Current age as the time left between birth and
+    ///            death based on average life expectancy.
     func lifespanAsTime() -> Time? {
         
         guard let b = birth, let ale = averageLifeExpectancy else {
