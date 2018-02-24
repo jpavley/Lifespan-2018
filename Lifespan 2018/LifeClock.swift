@@ -52,7 +52,6 @@ class LifeClock {
         }
     }
     
-    
     /// Inits a LifeClock object with the time in a Date
     ///
     /// - Parameter time: Date that contains the time to model as a clock
@@ -71,5 +70,4 @@ class LifeClock {
         formatter.dateFormat = "hh:mm:ss"
         return formatter.date(from: dateString)
     }
-    
 }

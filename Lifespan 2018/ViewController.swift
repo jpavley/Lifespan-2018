@@ -23,13 +23,14 @@ struct Identifiers {
     static let secondHandTag = 400
 }
 
-
 class ViewController: UIViewController {
 
     // MARK:- Properties -
     
     var mode = UserMode.day
     var name = "john"
+    var dob = "02-13-1961"
+    var ale = CGFloat(82.9) // https://www.ssa.gov/planners/lifeexpectancy.html
     
     // MARK:- Outlets -
     
@@ -67,7 +68,18 @@ class ViewController: UIViewController {
         titleLabel.text = "\(name)'s life in a \(mode.rawValue)".capitalized
         
         let clockGround = view.viewWithTag(Identifiers.clockGroundTag)
-        clockGround!.isHidden = mode != .day
+        
+        switch mode {
+        case .day:
+            clockGround!.isHidden = false
+            updateLifeClock()
+        case .week:
+            clockGround!.isHidden = true
+        case .month:
+            clockGround!.isHidden = true
+        case .year:
+            clockGround!.isHidden = true
+        }
     }
     
     // MARK:- Overrides -
@@ -76,9 +88,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         updateUX()
-        
-        let lifeClock = LifeClock(time: Date())
-        
+    }
+    
+    fileprivate func updateLifeClock() {
+        let lifeClock = createLifeClockForUser()
+        setClock(with: lifeClock)
+    }
+    
+    fileprivate func createLifeClockForUser() -> LifeClock {
+        let birthDate = Lifespan.stringToDate(dateString: dob)
+        let lifeSpan = Lifespan(name: name, dateOfBirth: birthDate!, averageLifeExpectancy: ale)
+        let spanTime = lifeSpan.lifespanAsTime()
+        return LifeClock(time: spanTime!)
+    }
+    
+    fileprivate func setClock(with lifeClock: LifeClock) {
         let hourHand = view.viewWithTag(Identifiers.hourHandTag) as! HourHandView
         let minuteHand = view.viewWithTag(Identifiers.minuteHandTag) as! MinuteHandView
         let secondHand = view.viewWithTag(Identifiers.secondHandTag) as! SecondHandView
