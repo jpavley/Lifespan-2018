@@ -107,13 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				180D65FC203A0B9300661157 /* AppDelegate.swift */,
-				18BC41DF204226370035648A /* MasterViewController.swift */,
-				180D65FE203A0B9300661157 /* DayViewController.swift */,
-				18BC41E1204226BB0035648A /* WeekViewController.swift */,
-				18BC41E3204226C70035648A /* MonthViewController.swift */,
-				18BC41E5204226D30035648A /* YearViewController.swift */,
-				489ABA422040700700227BFB /* Lifespan.swift */,
-				1870D57F203B3BBE0041EF53 /* LifeClock.swift */,
+				18BC41E7204227130035648A /* Viewcontrollers */,
+				18BC41E8204227350035648A /* Life Classes */,
 				180D660E203A0BF400661157 /* BarView.swift */,
 				180D6600203A0B9300661157 /* Main.storyboard */,
 				48356CF8203F62D30015CD47 /* CoreGraphicsView */,
@@ -133,6 +128,27 @@
 				1870D589203B41C90041EF53 /* Info.plist */,
 			);
 			path = LifeClockTests;
+			sourceTree = "<group>";
+		};
+		18BC41E7204227130035648A /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				18BC41DF204226370035648A /* MasterViewController.swift */,
+				180D65FE203A0B9300661157 /* DayViewController.swift */,
+				18BC41E1204226BB0035648A /* WeekViewController.swift */,
+				18BC41E3204226C70035648A /* MonthViewController.swift */,
+				18BC41E5204226D30035648A /* YearViewController.swift */,
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		18BC41E8204227350035648A /* Life Classes */ = {
+			isa = PBXGroup;
+			children = (
+				489ABA422040700700227BFB /* Lifespan.swift */,
+				1870D57F203B3BBE0041EF53 /* LifeClock.swift */,
+			);
+			path = "Life Classes";
 			sourceTree = "<group>";
 		};
 		48356CF8203F62D30015CD47 /* CoreGraphicsView */ = {
