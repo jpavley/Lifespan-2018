@@ -55,10 +55,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-FG-6dh" userLabel="Clock Ground" customClass="PrettyBackgroundView" customModule="Lifespan_2018" customModuleProvider="target">
-                                <rect key="frame" x="8" y="74" width="304" height="486"/>
+                                <rect key="frame" x="8" y="28" width="304" height="532"/>
                                 <subviews>
                                     <view opaque="NO" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-o0-ohQ" userLabel="Clock Face" customClass="ClockView" customModule="Lifespan_2018" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="91" width="304" height="304"/>
+                                        <rect key="frame" x="0.0" y="114" width="304" height="304"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
@@ -67,7 +67,7 @@
                                         </constraints>
                                     </view>
                                     <view opaque="NO" tag="200" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSH-T8-3tQ" userLabel="Minuet Hand" customClass="MinuteHandView" customModule="Lifespan_2018" customModuleProvider="target">
-                                        <rect key="frame" x="-8" y="83" width="320" height="320"/>
+                                        <rect key="frame" x="-8" y="106" width="320" height="320"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
@@ -78,7 +78,7 @@
                                         </constraints>
                                     </view>
                                     <view opaque="NO" tag="300" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIt-ug-uy7" userLabel="Hour Hand" customClass="HourHandView" customModule="Lifespan_2018" customModuleProvider="target">
-                                        <rect key="frame" x="-8" y="83" width="320" height="320"/>
+                                        <rect key="frame" x="-8" y="106" width="320" height="320"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
@@ -91,7 +91,7 @@
                                         <viewLayoutGuide key="safeArea" id="b16-4v-DFG"/>
                                     </view>
                                     <view opaque="NO" tag="400" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-bL-gFb" userLabel="Second Hand" customClass="SecondHandView" customModule="Lifespan_2018" customModuleProvider="target">
-                                        <rect key="frame" x="-8" y="83" width="320" height="320"/>
+                                        <rect key="frame" x="-8" y="106" width="320" height="320"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
@@ -120,7 +120,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
-                                        <real key="value" value="2"/>
+                                        <real key="value" value="0.75"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -134,9 +134,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mDl-FG-6dh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="13D-MG-f5o"/>
-                            <constraint firstItem="mDl-FG-6dh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="74" id="94l-P6-T2j"/>
+                            <constraint firstItem="mDl-FG-6dh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="94l-P6-T2j"/>
                             <constraint firstAttribute="trailing" secondItem="mDl-FG-6dh" secondAttribute="trailing" constant="8" id="Beb-4B-BL7"/>
-                            <constraint firstAttribute="bottom" secondItem="mDl-FG-6dh" secondAttribute="bottom" constant="8" id="d1F-8K-MXv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mDl-FG-6dh" secondAttribute="bottom" constant="8" id="d1F-8K-MXv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -154,7 +154,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeG-pd-r8T">
-                                <rect key="frame" x="139" y="274" width="43" height="21"/>
+                                <rect key="frame" x="138.5" y="273.5" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -181,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPx-3Y-TTZ">
-                                <rect key="frame" x="135" y="274" width="50" height="21"/>
+                                <rect key="frame" x="135" y="273.5" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -208,7 +208,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc2-hx-fEu">
-                                <rect key="frame" x="143" y="274" width="34" height="21"/>
+                                <rect key="frame" x="143" y="273.5" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
