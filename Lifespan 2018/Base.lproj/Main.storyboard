@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Optima.ttc">
+            <string>Optima-Italic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Master View Controller-->
         <scene sceneID="UyL-on-u5U">
@@ -108,7 +113,7 @@
                                         <viewLayoutGuide key="safeArea" id="SFP-ka-WAN"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PTQ-eQ-aZe" userLabel="Timing">
-                                        <rect key="frame" x="0.0" y="60" width="320" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="59" width="320" height="56.5"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PQK-3T-qcM">
                                                 <rect key="frame" x="81.5" y="0.0" width="157" height="29"/>
@@ -122,8 +127,8 @@
                                                 </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 hours, 15 mins, 39 secs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBL-dc-su6">
-                                                <rect key="frame" x="0.0" y="36" width="320" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                <rect key="frame" x="0.0" y="36" width="320" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -134,54 +139,54 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7mw-4o-OZU" userLabel="Keys">
-                                        <rect key="frame" x="60.5" y="452" width="200" height="74.5"/>
+                                        <rect key="frame" x="60.5" y="452" width="200" height="77.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="IQj-1O-ZTL">
-                                                <rect key="frame" x="22.5" y="0.0" width="155" height="19.5"/>
+                                                <rect key="frame" x="22.5" y="0.0" width="155" height="20.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX8-1R-arN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour ➣" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX8-1R-arN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yf-J2-x3D">
-                                                        <rect key="frame" x="79.5" y="0.0" width="75.5" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                        <rect key="frame" x="79.5" y="0.0" width="75.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="akk-S9-ZGK">
-                                                <rect key="frame" x="7" y="27.5" width="186" height="19.5"/>
+                                                <rect key="frame" x="6" y="28.5" width="188" height="20.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Minute =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC2-9n-DIO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Minute ➣" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC2-9n-DIO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 months" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bi-JG-IEu">
-                                                        <rect key="frame" x="95" y="0.0" width="91" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                        <rect key="frame" x="96" y="0.0" width="92" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="80w-ON-4cf">
-                                                <rect key="frame" x="17.5" y="55" width="165" height="19.5"/>
+                                                <rect key="frame" x="10.5" y="57" width="179" height="20.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Second =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thg-KZ-N42">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Second ➣" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thg-KZ-N42">
+                                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="17"/>
                                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwb-zo-0cD">
-                                                        <rect key="frame" x="84.5" y="0.0" width="80.5" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                        <rect key="frame" x="91.5" y="0.0" width="87.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="17"/>
                                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>

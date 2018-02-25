@@ -43,14 +43,14 @@ class Lifespan {
         let hoursRemaining = 12 - hourHandValue
         let minutesRemaining = 60 - minuteHandValue
         let secondsRemaining = 60 - secondHandValue
-        return "\(hoursRemaining) hrs, \(minutesRemaining) mins, \(secondsRemaining) secs"
+        return "\(hoursRemaining) hours ✳︎ \(minutesRemaining) minutes ✳︎ \(secondsRemaining) seconds"
     }
     
     var clockDescriptionSpent: String {
         let hoursRemaining = hourHandValue
         let minutesRemaining = minuteHandValue
         let secondsRemaining = secondHandValue
-        return "\(hoursRemaining) hrs, \(minutesRemaining) mins, \(secondsRemaining) secs"
+        return "\(hoursRemaining) hours ✳︎ \(minutesRemaining) minutes ✳︎ \(secondsRemaining) seconds"
     }
     
     var clockKeyYears: String {
