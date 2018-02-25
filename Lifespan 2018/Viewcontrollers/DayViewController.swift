@@ -18,9 +18,12 @@ class DayViewController: UIViewController {
     let hourHandTag = 300
     let secondHandTag = 400
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var clockCaption: UILabel!
-    @IBOutlet weak var clockKey: UILabel!
-    
+    @IBOutlet weak var clockKeyYears: UILabel!
+    @IBOutlet weak var clockKeyMonths: UILabel!
+    @IBOutlet weak var clockKeyWeeks: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

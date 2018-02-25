@@ -23,8 +23,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="xLP-u5-Xtn">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="8dC-Ig-nds">
+                            <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="XAO-ta-5Yw">
-                            <rect key="frame" x="52.5" y="7" width="215" height="30"/>
+                            <rect key="frame" x="54.5" y="7" width="215" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Day"/>
@@ -32,6 +35,7 @@
                                 <segment title="Month"/>
                                 <segment title="Year"/>
                             </segments>
+                            <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
@@ -51,7 +55,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-FG-6dh" userLabel="Clock Ground">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <subviews>
                                     <view opaque="NO" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-o0-ohQ" userLabel="Clock Face" customClass="ClockView" customModule="Lifespan_2018" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="124" width="320" height="320"/>
@@ -103,46 +107,78 @@
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="SFP-ka-WAN"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 hours, 15 mins, 39 secs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBL-dc-su6">
-                                        <rect key="frame" x="17" y="95" width="286" height="21"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One hour ≅ 6.9 years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yf-J2-x3D">
-                                        <rect key="frame" x="17" y="452" width="286" height="21"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PTQ-eQ-aZe" userLabel="Timing">
+                                        <rect key="frame" x="0.0" y="60" width="320" height="55.5"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PQK-3T-qcM">
+                                                <rect key="frame" x="81.5" y="0.0" width="157" height="29"/>
+                                                <segments>
+                                                    <segment title="Spent"/>
+                                                    <segment title="Remaining"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 hours, 15 mins, 39 secs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBL-dc-su6">
+                                                <rect key="frame" x="0.0" y="36" width="320" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="RBL-dc-su6" firstAttribute="leading" secondItem="PTQ-eQ-aZe" secondAttribute="leading" id="CHF-Cq-3n1"/>
+                                            <constraint firstAttribute="trailing" secondItem="RBL-dc-su6" secondAttribute="trailing" id="D2Z-XZ-UwU"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dqb-Df-RCg" userLabel="Keys">
+                                        <rect key="frame" x="0.0" y="452" width="320" height="74.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One hour ≅ 6.9 years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yf-J2-x3D">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One minute ≅ 6.9 months" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bi-JG-IEu">
+                                                <rect key="frame" x="0.0" y="27.5" width="320" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One second ≅ 6.9 weeks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwb-zo-0cD">
+                                                <rect key="frame" x="0.0" y="55" width="320" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.9051594243385892" green="0.95970998705273891" blue="0.93155848134326324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="RBL-dc-su6" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="17" id="7aU-mp-IcY"/>
+                                    <constraint firstItem="Dqb-Df-RCg" firstAttribute="top" secondItem="zWF-o0-ohQ" secondAttribute="bottom" constant="8" id="0Lz-jg-Vcr"/>
+                                    <constraint firstItem="PTQ-eQ-aZe" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" id="56C-cG-jLH"/>
+                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="top" secondItem="PTQ-eQ-aZe" secondAttribute="bottom" constant="8.5" id="8fl-79-t3I"/>
                                     <constraint firstItem="NIt-ug-uy7" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="Dy5-0g-vud"/>
-                                    <constraint firstAttribute="trailing" secondItem="RBL-dc-su6" secondAttribute="trailing" constant="17" id="Fdq-ob-S6g"/>
-                                    <constraint firstItem="NIt-ug-uy7" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="Ji2-3v-TWM"/>
-                                    <constraint firstItem="RBL-dc-su6" firstAttribute="top" secondItem="mDl-FG-6dh" secondAttribute="top" constant="95" id="TlD-3A-iRv"/>
+                                    <constraint firstItem="NIt-ug-uy7" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" constant="10" id="Ji2-3v-TWM"/>
+                                    <constraint firstAttribute="trailing" secondItem="PTQ-eQ-aZe" secondAttribute="trailing" id="NeX-x0-P4r"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" id="Vjy-Uj-lkn"/>
-                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="VrW-BF-xow"/>
-                                    <constraint firstAttribute="bottom" secondItem="6Yf-J2-x3D" secondAttribute="bottom" constant="95" id="VxP-MB-xJN"/>
-                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="top" secondItem="RBL-dc-su6" secondAttribute="bottom" constant="8" id="YOe-d8-O0F"/>
+                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" constant="10" id="VrW-BF-xow"/>
                                     <constraint firstAttribute="trailing" secondItem="zWF-o0-ohQ" secondAttribute="trailing" id="aqq-Ff-qXA"/>
-                                    <constraint firstAttribute="trailing" secondItem="6Yf-J2-x3D" secondAttribute="trailing" constant="17" id="cIc-rv-3gH"/>
-                                    <constraint firstItem="XGT-bL-gFb" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="dcx-rr-zDr"/>
-                                    <constraint firstItem="6Yf-J2-x3D" firstAttribute="top" secondItem="zWF-o0-ohQ" secondAttribute="bottom" constant="8" id="fOG-AS-DU7"/>
-                                    <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="fqr-Ug-pvj"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dqb-Df-RCg" secondAttribute="trailing" id="bnW-5z-DcN"/>
+                                    <constraint firstItem="Dqb-Df-RCg" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" id="cur-BS-BNh"/>
+                                    <constraint firstItem="XGT-bL-gFb" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" constant="10" id="dcx-rr-zDr"/>
+                                    <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" constant="10" id="fqr-Ug-pvj"/>
                                     <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="mXe-JJ-lzx"/>
                                     <constraint firstItem="XGT-bL-gFb" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="pRB-m8-ze6"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="uZc-JI-fxU"/>
-                                    <constraint firstItem="6Yf-J2-x3D" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="17" id="ud1-CH-hpv"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mDl-FG-6dh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="13D-MG-f5o"/>
-                            <constraint firstItem="mDl-FG-6dh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="94l-P6-T2j"/>
+                            <constraint firstItem="mDl-FG-6dh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="94l-P6-T2j"/>
                             <constraint firstAttribute="trailing" secondItem="mDl-FG-6dh" secondAttribute="trailing" id="Beb-4B-BL7"/>
                             <constraint firstAttribute="bottom" secondItem="mDl-FG-6dh" secondAttribute="bottom" id="d1F-8K-MXv"/>
                         </constraints>
@@ -150,12 +186,15 @@
                     </view>
                     <connections>
                         <outlet property="clockCaption" destination="RBL-dc-su6" id="Xbd-tz-K9v"/>
-                        <outlet property="clockKey" destination="6Yf-J2-x3D" id="n89-pc-IvJ"/>
+                        <outlet property="clockKeyMonths" destination="8bi-JG-IEu" id="Scb-HJ-cK9"/>
+                        <outlet property="clockKeyWeeks" destination="xwb-zo-0cD" id="ZXA-hD-MeB"/>
+                        <outlet property="clockKeyYears" destination="6Yf-J2-x3D" id="Qjf-5J-j6B"/>
+                        <outlet property="segmentedControl" destination="PQK-3T-qcM" id="zVl-47-99D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="729" y="37"/>
+            <point key="canvasLocation" x="727.5" y="36.971830985915496"/>
         </scene>
         <!--Week View Controller-->
         <scene sceneID="9bg-c3-dfQ">
