@@ -117,6 +117,9 @@
                                                     <segment title="Remaining"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="segmentDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="1Ub-8q-1Oi"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 hours, 15 mins, 39 secs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBL-dc-su6">
                                                 <rect key="frame" x="0.0" y="36" width="320" height="19.5"/>

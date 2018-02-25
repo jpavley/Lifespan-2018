@@ -39,18 +39,47 @@ class Lifespan {
     var minuteHandValue = 0
     var secondHandValue = 0
     
-    var clockDescription: String {
+    var clockDescriptionRemaining: String {
         let hoursRemaining = 12 - hourHandValue
         let minutesRemaining = 60 - minuteHandValue
         let secondsRemaining = 60 - secondHandValue
-        return "\(hoursRemaining) hrs, \(minutesRemaining) mins, \(secondsRemaining) secs remaining"
+        return "\(hoursRemaining) hrs, \(minutesRemaining) mins, \(secondsRemaining) secs"
     }
     
-    var clockKey: String {
+    var clockDescriptionSpent: String {
+        let hoursRemaining = hourHandValue
+        let minutesRemaining = minuteHandValue
+        let secondsRemaining = secondHandValue
+        return "\(hoursRemaining) hrs, \(minutesRemaining) mins, \(secondsRemaining) secs"
+    }
+    
+    var clockKeyYears: String {
         if let ale = averageLifeExpectancy {
+            // years per hour
             let hourSpan = ale/12
             let hourSpanString = String(format: "%.2f", hourSpan)
-            return "1.0 hour ≅ \(hourSpanString) years"
+            return "\(hourSpanString) years"
+        } else {
+            return ""
+        }
+    }
+    
+    var clockKeyMinutes: String {
+        if let ale = averageLifeExpectancy {
+            // months per min
+            let minSpan = ((ale/12)/60)*12
+            let minSpanString = String(format: "%.2f", minSpan)
+            return "\(minSpanString) months"
+        } else {
+            return ""
+        }
+    }
+    
+    var clockKeySeconds: String {
+        if let ale = averageLifeExpectancy {
+            let secSpan = (((ale/12)/60)/60)*365
+            let secSpanString = String(format: "%.2f", secSpan)
+            return "\(secSpanString) days"
         } else {
             return ""
         }
