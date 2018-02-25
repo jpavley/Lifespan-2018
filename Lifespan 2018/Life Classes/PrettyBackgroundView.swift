@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class PrettyBackgroundView: UIView {
-
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -33,11 +33,16 @@ class PrettyBackgroundView: UIView {
     
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
-            layer.cornerRadius = cornerRadius
+            if isX() {
+                layer.cornerRadius = 40
+            } else {
+                layer.cornerRadius = cornerRadius
+            }
+
             layer.masksToBounds = cornerRadius > 0
         }
     }
-        
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.shouldRasterize = true
@@ -50,5 +55,12 @@ class PrettyBackgroundView: UIView {
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
     }
-
+    
+    fileprivate func isX() -> Bool {
+        if UIDevice().userInterfaceIdiom == .phone {
+            return (UIScreen.main.nativeBounds.height == 2436)
+        } else {
+            return false
+        }
+    }
 }

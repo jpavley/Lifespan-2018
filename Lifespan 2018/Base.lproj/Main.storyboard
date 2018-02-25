@@ -54,11 +54,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-FG-6dh" userLabel="Clock Ground">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDl-FG-6dh" userLabel="Clock Ground" customClass="PrettyBackgroundView" customModule="Lifespan_2018" customModuleProvider="target">
+                                <rect key="frame" x="8" y="74" width="304" height="486"/>
                                 <subviews>
                                     <view opaque="NO" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-o0-ohQ" userLabel="Clock Face" customClass="ClockView" customModule="Lifespan_2018" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="91" width="304" height="304"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
@@ -67,7 +67,7 @@
                                         </constraints>
                                     </view>
                                     <view opaque="NO" tag="200" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSH-T8-3tQ" userLabel="Minuet Hand" customClass="MinuteHandView" customModule="Lifespan_2018" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                        <rect key="frame" x="-8" y="83" width="320" height="320"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
@@ -78,13 +78,12 @@
                                         </constraints>
                                     </view>
                                     <view opaque="NO" tag="300" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIt-ug-uy7" userLabel="Hour Hand" customClass="HourHandView" customModule="Lifespan_2018" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                        <rect key="frame" x="-8" y="83" width="320" height="320"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="NIt-ug-uy7" secondAttribute="height" multiplier="1:1" id="77b-vB-49c"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="AeB-8k-uYC"/>
                                             <constraint firstAttribute="width" constant="320" id="AvE-4I-qqt"/>
                                             <constraint firstAttribute="width" secondItem="NIt-ug-uy7" secondAttribute="height" multiplier="1:1" id="RuH-CQ-UCS"/>
                                             <constraint firstAttribute="width" secondItem="NIt-ug-uy7" secondAttribute="height" multiplier="1:1" id="u7G-BH-5xg"/>
@@ -92,14 +91,12 @@
                                         <viewLayoutGuide key="safeArea" id="b16-4v-DFG"/>
                                     </view>
                                     <view opaque="NO" tag="400" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-bL-gFb" userLabel="Second Hand" customClass="SecondHandView" customModule="Lifespan_2018" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                        <rect key="frame" x="-8" y="83" width="320" height="320"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XGT-bL-gFb" secondAttribute="height" multiplier="1:1" id="12z-BI-GUZ"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="7rB-pY-KfN"/>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="320" id="Gvs-Ti-gDL"/>
                                             <constraint firstAttribute="width" secondItem="XGT-bL-gFb" secondAttribute="height" multiplier="1:1" id="VsP-x5-hRg"/>
                                             <constraint firstAttribute="width" secondItem="XGT-bL-gFb" secondAttribute="height" multiplier="1:1" id="bBf-IJ-b9G"/>
                                             <constraint firstAttribute="width" constant="320" id="m61-h1-eO5"/>
@@ -110,25 +107,36 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.83743780850000005" green="0.82031215310619299" blue="0.82031215310619299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="NIt-ug-uy7" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="Dy5-0g-vud"/>
-                                    <constraint firstItem="NIt-ug-uy7" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" constant="10" id="Ji2-3v-TWM"/>
+                                    <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="3t3-gx-DFu"/>
+                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="Osq-ls-qCG"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" id="Vjy-Uj-lkn"/>
-                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" constant="10" id="VrW-BF-xow"/>
+                                    <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="Xqm-HH-OJ5"/>
                                     <constraint firstAttribute="trailing" secondItem="zWF-o0-ohQ" secondAttribute="trailing" id="aqq-Ff-qXA"/>
-                                    <constraint firstItem="XGT-bL-gFb" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" constant="10" id="dcx-rr-zDr"/>
-                                    <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" constant="10" id="fqr-Ug-pvj"/>
-                                    <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="mXe-JJ-lzx"/>
-                                    <constraint firstItem="XGT-bL-gFb" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="pRB-m8-ze6"/>
-                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="uZc-JI-fxU"/>
+                                    <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="eSu-ii-wGD"/>
+                                    <constraint firstItem="NIt-ug-uy7" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="gsP-bw-0pE"/>
+                                    <constraint firstItem="XGT-bL-gFb" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="pE3-v1-VpM"/>
+                                    <constraint firstItem="XGT-bL-gFb" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="rq7-qf-o4l"/>
+                                    <constraint firstItem="NIt-ug-uy7" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="u0o-48-vO6"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mDl-FG-6dh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="13D-MG-f5o"/>
-                            <constraint firstItem="mDl-FG-6dh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="94l-P6-T2j"/>
-                            <constraint firstAttribute="trailing" secondItem="mDl-FG-6dh" secondAttribute="trailing" id="Beb-4B-BL7"/>
-                            <constraint firstAttribute="bottom" secondItem="mDl-FG-6dh" secondAttribute="bottom" id="d1F-8K-MXv"/>
+                            <constraint firstItem="mDl-FG-6dh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="13D-MG-f5o"/>
+                            <constraint firstItem="mDl-FG-6dh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="74" id="94l-P6-T2j"/>
+                            <constraint firstAttribute="trailing" secondItem="mDl-FG-6dh" secondAttribute="trailing" constant="8" id="Beb-4B-BL7"/>
+                            <constraint firstAttribute="bottom" secondItem="mDl-FG-6dh" secondAttribute="bottom" constant="8" id="d1F-8K-MXv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
