@@ -12,7 +12,7 @@
 		180D6602203A0B9300661157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180D6600203A0B9300661157 /* Main.storyboard */; };
 		180D6604203A0B9300661157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180D6603203A0B9300661157 /* Assets.xcassets */; };
 		180D6607203A0B9300661157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180D6605203A0B9300661157 /* LaunchScreen.storyboard */; };
-		180D660F203A0BF500661157 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D660E203A0BF400661157 /* BarView.swift */; };
+		180D660F203A0BF500661157 /* PrettyBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D660E203A0BF400661157 /* PrettyBackgroundView.swift */; };
 		1870D580203B3BBE0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
 		1870D588203B41C90041EF53 /* LifeClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D587203B41C90041EF53 /* LifeClockTests.swift */; };
 		1870D58F203B41CC0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
@@ -50,7 +50,7 @@
 		180D6603203A0B9300661157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180D6606203A0B9300661157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180D6608203A0B9300661157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		180D660E203A0BF400661157 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		180D660E203A0BF400661157 /* PrettyBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyBackgroundView.swift; sourceTree = "<group>"; };
 		1870D57F203B3BBE0041EF53 /* LifeClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClock.swift; sourceTree = "<group>"; };
 		1870D585203B41C90041EF53 /* LifeClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1870D587203B41C90041EF53 /* LifeClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClockTests.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				180D65FC203A0B9300661157 /* AppDelegate.swift */,
 				18BC41E7204227130035648A /* Viewcontrollers */,
 				18BC41E8204227350035648A /* Life Classes */,
-				180D660E203A0BF400661157 /* BarView.swift */,
+				180D660E203A0BF400661157 /* PrettyBackgroundView.swift */,
 				180D6600203A0B9300661157 /* Main.storyboard */,
 				48356CF8203F62D30015CD47 /* CoreGraphicsView */,
 				180D6603203A0B9300661157 /* Assets.xcassets */,
@@ -274,7 +274,7 @@
 				489ABA3F203F699400227BFB /* HourHandView.swift in Sources */,
 				18BC41EA204253EF0035648A /* UserProfile.swift in Sources */,
 				18BC41E0204226370035648A /* MasterViewController.swift in Sources */,
-				180D660F203A0BF500661157 /* BarView.swift in Sources */,
+				180D660F203A0BF500661157 /* PrettyBackgroundView.swift in Sources */,
 				48356CF5203F48B40015CD47 /* MinuteHandView.swift in Sources */,
 				48356CF2203E1C430015CD47 /* ClockView.swift in Sources */,
 				18BC41E2204226BB0035648A /* WeekViewController.swift in Sources */,

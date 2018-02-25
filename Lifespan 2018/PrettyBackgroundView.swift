@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class BarView: UIView {
+class PrettyBackgroundView: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
