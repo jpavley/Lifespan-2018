@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DayViewController: UIViewController {
+class ClockViewController: UIViewController {
     
     var lifeSpan: Lifespan!
     var lifeClock: LifeClock!

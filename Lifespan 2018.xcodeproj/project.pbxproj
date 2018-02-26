@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180D65FD203A0B9300661157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D65FC203A0B9300661157 /* AppDelegate.swift */; };
-		180D65FF203A0B9300661157 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D65FE203A0B9300661157 /* DayViewController.swift */; };
+		180D65FF203A0B9300661157 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D65FE203A0B9300661157 /* ClockViewController.swift */; };
 		180D6602203A0B9300661157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180D6600203A0B9300661157 /* Main.storyboard */; };
 		180D6604203A0B9300661157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180D6603203A0B9300661157 /* Assets.xcassets */; };
 		180D6607203A0B9300661157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180D6605203A0B9300661157 /* LaunchScreen.storyboard */; };
@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		180D65F9203A0B9300661157 /* Lifespan 2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lifespan 2018.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180D65FC203A0B9300661157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		180D65FE203A0B9300661157 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		180D65FE203A0B9300661157 /* ClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
 		180D6601203A0B9300661157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		180D6603203A0B9300661157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180D6606203A0B9300661157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				18BC41DF204226370035648A /* MasterViewController.swift */,
-				180D65FE203A0B9300661157 /* DayViewController.swift */,
+				180D65FE203A0B9300661157 /* ClockViewController.swift */,
 				18BC41E1204226BB0035648A /* WeekViewController.swift */,
 				18BC41E3204226C70035648A /* MonthViewController.swift */,
 				18BC41E5204226D30035648A /* YearViewController.swift */,
@@ -279,7 +279,7 @@
 				48356CF5203F48B40015CD47 /* MinuteHandView.swift in Sources */,
 				48356CF2203E1C430015CD47 /* ClockView.swift in Sources */,
 				18BC41E2204226BB0035648A /* WeekViewController.swift in Sources */,
-				180D65FF203A0B9300661157 /* DayViewController.swift in Sources */,
+				180D65FF203A0B9300661157 /* ClockViewController.swift in Sources */,
 				1870D580203B3BBE0041EF53 /* LifeClock.swift in Sources */,
 				18BC41E6204226D30035648A /* YearViewController.swift in Sources */,
 				489ABA41203F6D2500227BFB /* SecondHandView.swift in Sources */,

@@ -12,9 +12,9 @@ class MasterViewController: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    private lazy var dayViewController: DayViewController = {
+    private lazy var dayViewController: ClockViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        var viewController = storyboard.instantiateViewController(withIdentifier: "DayViewController") as! DayViewController
+        var viewController = storyboard.instantiateViewController(withIdentifier: "ClockViewController") as! ClockViewController
         self.add(asChildViewController: viewController)
         return viewController
     }()
