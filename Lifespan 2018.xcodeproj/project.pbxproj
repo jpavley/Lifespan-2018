@@ -19,7 +19,7 @@
 		18BC41E0204226370035648A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41DF204226370035648A /* MasterViewController.swift */; };
 		18BC41E2204226BB0035648A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E1204226BB0035648A /* ProfileViewController.swift */; };
 		18BC41E4204226C70035648A /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E3204226C70035648A /* AnalysisViewController.swift */; };
-		18BC41E6204226D30035648A /* YearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E5204226D30035648A /* YearViewController.swift */; };
+		18BC41E6204226D30035648A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E5204226D30035648A /* InfoViewController.swift */; };
 		18BC41EA204253EF0035648A /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E9204253EF0035648A /* UserProfile.swift */; };
 		18BC41EB2042541A0035648A /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E9204253EF0035648A /* UserProfile.swift */; };
 		18BC41EC204324D60035648A /* PrettyBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D660E203A0BF400661157 /* PrettyBackgroundView.swift */; };
@@ -59,7 +59,7 @@
 		18BC41DF204226370035648A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		18BC41E1204226BB0035648A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18BC41E3204226C70035648A /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
-		18BC41E5204226D30035648A /* YearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearViewController.swift; sourceTree = "<group>"; };
+		18BC41E5204226D30035648A /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		18BC41E9204253EF0035648A /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		48356CF1203E1C430015CD47 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		48356CF3203F40F50015CD47 /* lifeclock2.idraw */ = {isa = PBXFileReference; lastKnownFileType = file; path = lifeclock2.idraw; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 				180D65FE203A0B9300661157 /* ClockViewController.swift */,
 				18BC41E1204226BB0035648A /* ProfileViewController.swift */,
 				18BC41E3204226C70035648A /* AnalysisViewController.swift */,
-				18BC41E5204226D30035648A /* YearViewController.swift */,
+				18BC41E5204226D30035648A /* InfoViewController.swift */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 				18BC41E2204226BB0035648A /* ProfileViewController.swift in Sources */,
 				180D65FF203A0B9300661157 /* ClockViewController.swift in Sources */,
 				1870D580203B3BBE0041EF53 /* LifeClock.swift in Sources */,
-				18BC41E6204226D30035648A /* YearViewController.swift in Sources */,
+				18BC41E6204226D30035648A /* InfoViewController.swift in Sources */,
 				489ABA41203F6D2500227BFB /* SecondHandView.swift in Sources */,
 				18BC41E4204226C70035648A /* AnalysisViewController.swift in Sources */,
 				180D65FD203A0B9300661157 /* AppDelegate.swift in Sources */,

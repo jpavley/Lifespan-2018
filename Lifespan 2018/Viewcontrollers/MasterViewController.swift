@@ -33,9 +33,9 @@ class MasterViewController: UIViewController {
         return viewController
     }()
     
-    private lazy var yearViewController: YearViewController = {
+    private lazy var yearViewController: InfoViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        var viewController = storyboard.instantiateViewController(withIdentifier: "YearViewController") as! YearViewController
+        var viewController = storyboard.instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController
         self.add(asChildViewController: viewController)
         return viewController
     }()

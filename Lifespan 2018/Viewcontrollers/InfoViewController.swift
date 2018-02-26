@@ -1,5 +1,5 @@
 //
-//  YearViewController.swift
+//  InfoViewController.swift
 //  Lifespan 2018
 //
 //  Created by jpavley12 on 2/24/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YearViewController: UIViewController {
+class InfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
