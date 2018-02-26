@@ -169,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="743" y="744"/>
         </scene>
-        <!--Month View Controller-->
+        <!--Analysis View Controller-->
         <scene sceneID="nKd-xQ-k6d">
             <objects>
-                <viewController storyboardIdentifier="MonthViewController" id="nOB-tE-IIP" customClass="MonthViewController" customModule="Lifespan_2018" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnalysisViewController" id="nOB-tE-IIP" customClass="AnalysisViewController" customModule="Lifespan_2018" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d8H-C5-nqO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -26,9 +26,9 @@ class MasterViewController: UIViewController {
         return viewController
     }()
     
-    private lazy var monthViewController: MonthViewController = {
+    private lazy var monthViewController: AnalysisViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        var viewController = storyboard.instantiateViewController(withIdentifier: "MonthViewController") as! MonthViewController
+        var viewController = storyboard.instantiateViewController(withIdentifier: "AnalysisViewController") as! AnalysisViewController
         self.add(asChildViewController: viewController)
         return viewController
     }()
