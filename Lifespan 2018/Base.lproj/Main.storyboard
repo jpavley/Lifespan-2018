@@ -287,10 +287,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wcu-L3-kfe"/>
                     </view>
+                    <connections>
+                        <outlet property="activitySlider" destination="Zlr-Cm-dbG" id="oQ1-c7-Jha"/>
+                        <outlet property="caloriesSlider" destination="cF8-C3-SSJ" id="OWP-P2-MrS"/>
+                        <outlet property="dateOfBirthField" destination="fKz-nS-lF6" id="PmY-Gc-eTM"/>
+                        <outlet property="drinkingSwitch" destination="IS7-x2-9E6" id="D1p-cx-yUk"/>
+                        <outlet property="lifeExpentencyField" destination="xex-Ef-yTs" id="x0o-ZY-j1D"/>
+                        <outlet property="nameField" destination="hK9-Ec-i2A" id="uPh-Xu-cSu"/>
+                        <outlet property="smokingSwitch" destination="quG-cJ-hpr" id="26s-Jy-WDo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTr-7x-3dw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742.5" y="743.66197183098598"/>
+            <point key="canvasLocation" x="727" y="744"/>
         </scene>
         <!--Analysis View Controller-->
         <scene sceneID="nKd-xQ-k6d">

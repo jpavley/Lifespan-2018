@@ -9,6 +9,14 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var dateOfBirthField: UITextField!
+    @IBOutlet weak var lifeExpentencyField: UITextField!
+    @IBOutlet weak var activitySlider: UISlider!
+    @IBOutlet weak var caloriesSlider: UISlider!
+    @IBOutlet weak var smokingSwitch: UISwitch!
+    @IBOutlet weak var drinkingSwitch: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
