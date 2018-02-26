@@ -17,7 +17,7 @@
 		1870D588203B41C90041EF53 /* LifeClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D587203B41C90041EF53 /* LifeClockTests.swift */; };
 		1870D58F203B41CC0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
 		18BC41E0204226370035648A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41DF204226370035648A /* MasterViewController.swift */; };
-		18BC41E2204226BB0035648A /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E1204226BB0035648A /* WeekViewController.swift */; };
+		18BC41E2204226BB0035648A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E1204226BB0035648A /* ProfileViewController.swift */; };
 		18BC41E4204226C70035648A /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E3204226C70035648A /* MonthViewController.swift */; };
 		18BC41E6204226D30035648A /* YearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E5204226D30035648A /* YearViewController.swift */; };
 		18BC41EA204253EF0035648A /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E9204253EF0035648A /* UserProfile.swift */; };
@@ -57,7 +57,7 @@
 		1870D587203B41C90041EF53 /* LifeClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClockTests.swift; sourceTree = "<group>"; };
 		1870D589203B41C90041EF53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BC41DF204226370035648A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		18BC41E1204226BB0035648A /* WeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
+		18BC41E1204226BB0035648A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18BC41E3204226C70035648A /* MonthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthViewController.swift; sourceTree = "<group>"; };
 		18BC41E5204226D30035648A /* YearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearViewController.swift; sourceTree = "<group>"; };
 		18BC41E9204253EF0035648A /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 			children = (
 				18BC41DF204226370035648A /* MasterViewController.swift */,
 				180D65FE203A0B9300661157 /* ClockViewController.swift */,
-				18BC41E1204226BB0035648A /* WeekViewController.swift */,
+				18BC41E1204226BB0035648A /* ProfileViewController.swift */,
 				18BC41E3204226C70035648A /* MonthViewController.swift */,
 				18BC41E5204226D30035648A /* YearViewController.swift */,
 			);
@@ -278,7 +278,7 @@
 				180D660F203A0BF500661157 /* PrettyBackgroundView.swift in Sources */,
 				48356CF5203F48B40015CD47 /* MinuteHandView.swift in Sources */,
 				48356CF2203E1C430015CD47 /* ClockView.swift in Sources */,
-				18BC41E2204226BB0035648A /* WeekViewController.swift in Sources */,
+				18BC41E2204226BB0035648A /* ProfileViewController.swift in Sources */,
 				180D65FF203A0B9300661157 /* ClockViewController.swift in Sources */,
 				1870D580203B3BBE0041EF53 /* LifeClock.swift in Sources */,
 				18BC41E6204226D30035648A /* YearViewController.swift in Sources */,

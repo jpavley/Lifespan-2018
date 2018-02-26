@@ -19,9 +19,9 @@ class MasterViewController: UIViewController {
         return viewController
     }()
     
-    private lazy var weekViewController: WeekViewController = {
+    private lazy var weekViewController: ProfileViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        var viewController = storyboard.instantiateViewController(withIdentifier: "WeekViewController") as! WeekViewController
+        var viewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         self.add(asChildViewController: viewController)
         return viewController
     }()
