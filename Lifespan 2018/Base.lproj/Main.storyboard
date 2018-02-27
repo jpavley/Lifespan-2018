@@ -179,21 +179,33 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameEdited:" destination="taZ-hl-SfQ" eventType="editingDidEnd" id="zk3-Zd-Wgc"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKz-nS-lF6">
                                 <rect key="frame" x="16" y="173" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dateOfBirthEdited:" destination="taZ-hl-SfQ" eventType="editingDidEnd" id="QaY-AD-Con"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xex-Ef-yTs">
                                 <rect key="frame" x="16" y="240" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="lifeExpentencyEdited:" destination="taZ-hl-SfQ" eventType="editingDidEnd" id="feb-eY-fOs"/>
+                                </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zlr-Cm-dbG">
                                 <rect key="frame" x="14" y="306" width="292" height="31"/>
+                                <connections>
+                                    <action selector="activityEdited:" destination="taZ-hl-SfQ" eventType="valueChanged" id="svf-CP-ftU"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ML-E5-O6W">
                                 <rect key="frame" x="259" y="296" width="45" height="20"/>
@@ -215,6 +227,9 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cF8-C3-SSJ">
                                 <rect key="frame" x="14" y="372" width="292" height="31"/>
+                                <connections>
+                                    <action selector="caloriesEdited:" destination="taZ-hl-SfQ" eventType="valueChanged" id="g6c-aX-tj2"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegatable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoX-nN-6lz">
                                 <rect key="frame" x="16" y="394" width="73" height="20"/>
@@ -224,6 +239,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="quG-cJ-hpr">
                                 <rect key="frame" x="16" y="430" width="51" height="31"/>
+                                <connections>
+                                    <action selector="smokingEdited:" destination="taZ-hl-SfQ" eventType="valueChanged" id="5bd-T2-ISI"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smoking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utJ-cg-des">
                                 <rect key="frame" x="73" y="435" width="67" height="21"/>
@@ -233,6 +251,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IS7-x2-9E6">
                                 <rect key="frame" x="16" y="469" width="51" height="31"/>
+                                <connections>
+                                    <action selector="drinkingEdited:" destination="taZ-hl-SfQ" eventType="valueChanged" id="Ial-Wr-4ps"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drinking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orr-eK-153">
                                 <rect key="frame" x="73" y="474" width="64" height="21"/>

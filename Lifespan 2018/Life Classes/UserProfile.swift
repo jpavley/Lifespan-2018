@@ -9,7 +9,7 @@
 import Foundation
 import CoreGraphics
 
-struct UserProfile {
+class UserProfile {
     var name = "john"
     var dob = "02-13-1961"
     var ale = CGFloat(82.9) // https://www.ssa.gov/planners/lifeexpectancy.html

@@ -20,6 +20,38 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var smokingSwitch: UISwitch!
     @IBOutlet weak var drinkingSwitch: UISwitch!
 
+    @IBAction func nameEdited(_ sender: Any) {
+        userProfile.name = nameField.text!
+    }
+    
+    @IBAction func dateOfBirthEdited(_ sender: Any) {
+        userProfile.dob = dateOfBirthField.text!
+    }
+    
+    @IBAction func lifeExpentencyEdited(_ sender: Any) {
+        if let lifeExpentancyValue = Double(lifeExpentencyField.text!) {
+            userProfile.ale = CGFloat(lifeExpentancyValue)
+        }
+    }
+    
+    @IBAction func activityEdited(_ sender: Any) {
+        userProfile.activity = Double(activitySlider.value)
+    }
+    
+    @IBAction func caloriesEdited(_ sender: Any) {
+        userProfile.calories = Double(caloriesSlider.value)
+    }
+    
+    @IBAction func smokingEdited(_ sender: Any) {
+        userProfile.smoking = smokingSwitch.isOn
+    }
+    
+    @IBAction func drinkingEdited(_ sender: Any) {
+        userProfile.drinking = drinkingSwitch.isOn
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

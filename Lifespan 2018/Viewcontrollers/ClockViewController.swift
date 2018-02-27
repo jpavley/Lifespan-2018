@@ -35,6 +35,7 @@ class ClockViewController: UIViewController {
         
         let masterVC = parent as! MasterViewController
         userProfile = masterVC.userProfile
+        updateView()
     }
     
     fileprivate func updateView() {
@@ -47,6 +48,10 @@ class ClockViewController: UIViewController {
     }
     
     fileprivate func createLifeClockForUser() -> LifeClock {
+        
+        // DEBUG
+        print("ale \(userProfile.ale)")
+        
         let birthDate = Lifespan.stringToDate(dateString: userProfile.dob)
         lifeSpan = Lifespan(name: userProfile.name, dateOfBirth: birthDate!, averageLifeExpectancy: userProfile.ale)
         let spanTime = lifeSpan.lifespanAsTime()
