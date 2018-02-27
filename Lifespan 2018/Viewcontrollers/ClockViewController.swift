@@ -25,8 +25,16 @@ class ClockViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        userProfile = UserProfile()
         updateView()
+    }
+    
+    override func willMove(toParentViewController parent: UIViewController?) {
+        if parent == nil {
+            return
+        }
+        
+        let masterVC = parent as! MasterViewController
+        userProfile = masterVC.userProfile
     }
     
     fileprivate func updateView() {

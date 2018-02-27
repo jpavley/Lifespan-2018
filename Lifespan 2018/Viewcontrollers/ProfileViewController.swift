@@ -1,5 +1,5 @@
 //
-//  WeekViewController.swift
+//  ProfileViewController.swift
 //  Lifespan 2018
 //
 //  Created by jpavley12 on 2/24/18.
@@ -9,6 +9,8 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    var userProfile: UserProfile!
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var dateOfBirthField: UITextField!
@@ -22,6 +24,23 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        nameField.text = userProfile.name
+        dateOfBirthField.text = userProfile.dob
+        lifeExpentencyField.text = "\(userProfile.ale)"
+        activitySlider.setValue(Float(userProfile.activity), animated: false)
+        caloriesSlider.setValue(Float(userProfile.calories), animated: false)
+        smokingSwitch.isOn = userProfile.smoking
+        drinkingSwitch.isOn = userProfile.drinking
+    }
+    
+    override func willMove(toParentViewController parent: UIViewController?) {
+        if parent == nil {
+            return
+        }
+        
+        let masterVC = parent as! MasterViewController
+        userProfile = masterVC.userProfile
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +48,6 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

@@ -8,7 +8,11 @@
 
 import UIKit
 
+
+
 class MasterViewController: UIViewController {
+    
+    var userProfile = UserProfile()
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
