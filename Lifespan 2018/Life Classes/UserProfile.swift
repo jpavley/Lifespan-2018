@@ -15,17 +15,37 @@ struct RangedValue {
     var setting = 0.5
 }
 
+/// Models a user of Lifespan.
+/// A good source for life expentancy is // https://www.ssa.gov/planners/lifeexpectancy.html
 class UserProfile {
-    var name = "john"
-    var dob = "02-13-1961"
-    var ale = CGFloat(82.9) // https://www.ssa.gov/planners/lifeexpectancy.html
-    var activity = 0.5
-    var calories = 0.5
-    var smoking = false
-    var drinking = false
     
+    var name = "john"
     var birthYear = RangedValue(min: 1900, max: 2020, setting: 1961)
-    var lifeExpectancy = RangedValue(min: 0, max: 83, setting: 120)
+    var lifeExpectancy = RangedValue(min: 0, max: 120, setting: 83)
     var activityLevel = RangedValue(min: 0, max: 10, setting: 5)
     var stressLevel = RangedValue(min: 0, max: 10, setting: 5)
+    
+    var dob: String {
+        get {
+            return "02-13-\(Int(birthYear.setting))"
+        }
+    }
+    
+    var ale: CGFloat {
+        get {
+            return CGFloat(lifeExpectancy.setting)
+        }
+    }
+    
+    var activity: CGFloat {
+        get {
+            return CGFloat(activityLevel.setting)
+        }
+    }
+    
+    var stress: CGFloat {
+        get {
+            return CGFloat(stressLevel.setting)
+        }
+    }
 }
