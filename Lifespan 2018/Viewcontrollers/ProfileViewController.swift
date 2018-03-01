@@ -13,44 +13,33 @@ class ProfileViewController: UIViewController {
     var userProfile: UserProfile!
     
     @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var dateOfBirthField: UITextField!
-    @IBOutlet weak var lifeExpentencyField: UITextField!
-    @IBOutlet weak var activitySlider: UISlider!
-    @IBOutlet weak var caloriesSlider: UISlider!
-    @IBOutlet weak var smokingSwitch: UISwitch!
-    @IBOutlet weak var drinkingSwitch: UISwitch!
+    @IBOutlet weak var birthYearField: UITextField!
+    @IBOutlet weak var lifeExpectancyField: UITextField!
+    @IBOutlet weak var activityLevelField: UITextField!
+    @IBOutlet weak var stressLevelField: UITextField!
+    
+    @IBOutlet weak var birthYearSlider: UISlider!
+    @IBOutlet weak var lifeExpectancySlider: UISlider!
+    @IBOutlet weak var activityLevelSlider: UISlider!
+    @IBOutlet weak var stressLevelSlider: UISlider!
 
+    
     @IBAction func nameEdited(_ sender: Any) {
         userProfile.name = nameField.text!
     }
     
-    @IBAction func dateOfBirthEdited(_ sender: Any) {
-        userProfile.dob = dateOfBirthField.text!
+    @IBAction func birthYearSliderChanged(_ sender: Any) {
     }
     
-    @IBAction func lifeExpentencyEdited(_ sender: Any) {
-        if let lifeExpentancyValue = Double(lifeExpentencyField.text!) {
-            userProfile.ale = CGFloat(lifeExpentancyValue)
-        }
+    @IBAction func lifeExpectancySliderChanged(_ sender: Any) {
     }
-    
-    @IBAction func activityEdited(_ sender: Any) {
-        userProfile.activity = Double(activitySlider.value)
+
+    @IBAction func activityLevelChanged(_ sender: Any) {
     }
-    
-    @IBAction func caloriesEdited(_ sender: Any) {
-        userProfile.calories = Double(caloriesSlider.value)
+
+    @IBAction func stressLevelSliderChanged(_ sender: Any) {
     }
-    
-    @IBAction func smokingEdited(_ sender: Any) {
-        userProfile.smoking = smokingSwitch.isOn
-    }
-    
-    @IBAction func drinkingEdited(_ sender: Any) {
-        userProfile.drinking = drinkingSwitch.isOn
-    }
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,12 +47,6 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         nameField.text = userProfile.name
-        dateOfBirthField.text = userProfile.dob
-        lifeExpentencyField.text = "\(userProfile.ale)"
-        activitySlider.setValue(Float(userProfile.activity), animated: false)
-        caloriesSlider.setValue(Float(userProfile.calories), animated: false)
-        smokingSwitch.isOn = userProfile.smoking
-        drinkingSwitch.isOn = userProfile.drinking
     }
     
     override func willMove(toParentViewController parent: UIViewController?) {
