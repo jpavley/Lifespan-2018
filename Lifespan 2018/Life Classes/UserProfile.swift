@@ -20,7 +20,7 @@ struct RangedValue {
 class UserProfile {
     
     var name = "john"
-    var birthYear = RangedValue(min: 1900, max: 2100, setting: 1961)
+    var birthYear = RangedValue(min: 1900, max: CalendarUtilities.thisYear(), setting: 1961)
     var lifeExpectancy = RangedValue(min: 0, max: 120, setting: 83)
     var activityLevel = RangedValue(min: 0, max: 10, setting: 5)
     var stressLevel = RangedValue(min: 0, max: 10, setting: 5)

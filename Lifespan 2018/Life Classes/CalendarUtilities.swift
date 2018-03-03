@@ -48,4 +48,10 @@ class CalendarUtilities {
         cal.timeZone = TimeZone(abbreviation: "UTC")!
         return cal
     }
+    
+    static func thisYear() -> Float {
+        let cal = CalendarUtilities.utcCal()
+        let year = cal.component(.year, from: Date())
+        return Float(year)
+    }
 }
