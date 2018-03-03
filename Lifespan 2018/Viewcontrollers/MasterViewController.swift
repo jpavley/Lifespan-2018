@@ -16,38 +16,38 @@ class MasterViewController: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    private lazy var dayViewController: ClockViewController = {
+    private lazy var clockViewController: ClockViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         var viewController = storyboard.instantiateViewController(withIdentifier: "ClockViewController") as! ClockViewController
         self.add(asChildViewController: viewController)
         return viewController
     }()
     
-    private lazy var weekViewController: ProfileViewController = {
+    private lazy var profileViewController: ProfileViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         var viewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         self.add(asChildViewController: viewController)
         return viewController
     }()
     
-    private lazy var monthViewController: AnalysisViewController = {
+    private lazy var analysisViewController: AnalysisViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         var viewController = storyboard.instantiateViewController(withIdentifier: "AnalysisViewController") as! AnalysisViewController
         self.add(asChildViewController: viewController)
         return viewController
     }()
     
-    private lazy var yearViewController: InfoViewController = {
+    private lazy var infoViewController: InfoViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         var viewController = storyboard.instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController
         self.add(asChildViewController: viewController)
         return viewController
     }()
     
-    let daySegmentID = 0
-    let weekSegmentID = 1
-    let monthSegmentID = 2
-    let yearSegmentID = 3
+    let clockSegmentID = 0
+    let profileSegmentID = 1
+    let analysisSegmentID = 2
+    let infoSegmentID = 3
     
     var currentSegmentID = 0
     
@@ -83,7 +83,7 @@ class MasterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        currentSegmentID = daySegmentID
+        currentSegmentID = clockSegmentID
         setupView()
     }
     
@@ -105,17 +105,17 @@ class MasterViewController: UIViewController {
         
         switch currentSegmentID {
             
-        case daySegmentID:
-            remove(asChildViewController: dayViewController)
+        case clockSegmentID:
+            remove(asChildViewController: clockViewController)
 
-        case weekSegmentID:
-            remove(asChildViewController: weekViewController)
+        case profileSegmentID:
+            remove(asChildViewController: profileViewController)
 
-        case monthSegmentID:
-            remove(asChildViewController: monthViewController)
+        case analysisSegmentID:
+            remove(asChildViewController: analysisViewController)
 
-        case yearSegmentID:
-            remove(asChildViewController: yearViewController)
+        case infoSegmentID:
+            remove(asChildViewController: infoViewController)
 
         default:
             ()
@@ -123,17 +123,17 @@ class MasterViewController: UIViewController {
         
         switch segmentedControl.selectedSegmentIndex {
             
-        case daySegmentID:
-            add(asChildViewController: dayViewController)
+        case clockSegmentID:
+            add(asChildViewController: clockViewController)
             
-        case weekSegmentID:
-            add(asChildViewController: weekViewController)
+        case profileSegmentID:
+            add(asChildViewController: profileViewController)
             
-        case monthSegmentID:
-            add(asChildViewController: monthViewController)
+        case analysisSegmentID:
+            add(asChildViewController: analysisViewController)
             
-        case yearSegmentID:
-            add(asChildViewController: yearViewController)
+        case infoSegmentID:
+            add(asChildViewController: infoViewController)
             
         default:
             ()
