@@ -183,7 +183,7 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zlr-Cm-dbG">
                                         <rect key="frame" x="-2" y="46" width="292" height="31"/>
                                         <connections>
-                                            <action selector="birthYearSliderChanged:" destination="taZ-hl-SfQ" eventType="valueChanged" id="tEG-K5-B7k"/>
+                                            <action selector="birthYearSliderChanged:" destination="taZ-hl-SfQ" eventType="valueChanged" id="Vsm-Yl-spu"/>
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clb-yD-9XL">
@@ -218,10 +218,6 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gR0-35-fw0">
                                         <rect key="frame" x="-2" y="46" width="292" height="31"/>
-                                        <connections>
-                                            <action selector="activityEdited:" destination="taZ-hl-SfQ" eventType="valueChanged" id="5ph-UQ-lrG"/>
-                                            <action selector="lifeExpectancySliderChanged:" destination="taZ-hl-SfQ" eventType="valueChanged" id="uKh-JZ-9Rd"/>
-                                        </connections>
                                     </slider>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="onS-pn-FVX">
                                         <rect key="frame" x="183" y="8" width="97" height="30"/>
@@ -255,10 +251,6 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rRc-be-hf0">
                                         <rect key="frame" x="-2" y="46" width="292" height="31"/>
-                                        <connections>
-                                            <action selector="activityEdited:" destination="taZ-hl-SfQ" eventType="valueChanged" id="ydl-UV-P9L"/>
-                                            <action selector="activityLevelChanged:" destination="taZ-hl-SfQ" eventType="valueChanged" id="DOR-FV-W55"/>
-                                        </connections>
                                     </slider>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n86-gh-aF5">
                                         <rect key="frame" x="183" y="8" width="97" height="30"/>
@@ -292,10 +284,6 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2EQ-gx-vWg">
                                         <rect key="frame" x="-2" y="46" width="292" height="31"/>
-                                        <connections>
-                                            <action selector="activityEdited:" destination="taZ-hl-SfQ" eventType="valueChanged" id="NnJ-Ww-MJ7"/>
-                                            <action selector="stressLevelSliderChanged:" destination="taZ-hl-SfQ" eventType="valueChanged" id="SS0-7D-cpt"/>
-                                        </connections>
                                     </slider>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMc-rX-bdn">
                                         <rect key="frame" x="183" y="8" width="97" height="30"/>
