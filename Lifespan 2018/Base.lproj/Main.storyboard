@@ -258,6 +258,9 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gR0-35-fw0">
                                         <rect key="frame" x="-2" y="46" width="292" height="31"/>
+                                        <connections>
+                                            <action selector="lifeExpectancySliderChanged:" destination="taZ-hl-SfQ" eventType="valueChanged" id="cKj-nJ-PBX"/>
+                                        </connections>
                                     </slider>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="onS-pn-FVX">
                                         <rect key="frame" x="183" y="8" width="97" height="30"/>

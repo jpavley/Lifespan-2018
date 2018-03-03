@@ -36,6 +36,10 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func lifeExpectancySliderChanged(_ sender: Any) {
+        let slider = sender as! UISlider
+        let sliderValue = slider.value.rounded(.toNearestOrAwayFromZero)
+        lifeExpectancyField.text = String(format: "%.0f", sliderValue)
+        userProfile.lifeExpectancy.setting = sliderValue
     }
 
     @IBAction func activityLevelChanged(_ sender: Any) {
@@ -51,10 +55,22 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         nameField.text = userProfile.name
+        updateBirthYear()
+        updateLifeExpentency()
+    }
+    
+    fileprivate func updateBirthYear() {
         birthYearSlider.minimumValue = userProfile.birthYear.min
         birthYearSlider.maximumValue = userProfile.birthYear.max
         birthYearSlider.value = userProfile.birthYear.setting
         birthYearField.text = String(format: "%.0f", userProfile.birthYear.setting)
+    }
+    
+    fileprivate func updateLifeExpentency() {
+        lifeExpectancySlider.minimumValue = userProfile.lifeExpectancy.min
+        lifeExpectancySlider.maximumValue = userProfile.lifeExpectancy.max
+        lifeExpectancySlider.value = userProfile.lifeExpectancy.setting
+        lifeExpectancyField.text = String(format: "%.0f", userProfile.lifeExpectancy.setting)
     }
     
     override func willMove(toParentViewController parent: UIViewController?) {
