@@ -8,7 +8,10 @@
 
 import UIKit
 
-
+// TODO: On startup there are 3 call to create the ClockViewController!
+//       Two removes() and an add(). Each time the ClockViewController and its
+//       objects are re-created. On remove() does the ClockViewController
+//       need to be created? Probably yes, so it can respond to willMove().
 
 class MasterViewController: UIViewController {
     
