@@ -48,6 +48,9 @@ class ClockViewController: UIViewController {
         
         // DEBUG
         print("lifeClock.time \(lifeClock.time) for user \(userProfile.name)")
+        if CalendarUtilities.stringToTime(timeString: "00:00:00") == lifeClock.time {
+            userProfile.livingOnBorrowedTime = true
+        }
     }
     
     fileprivate func createLifeClockForUser() -> LifeClock {

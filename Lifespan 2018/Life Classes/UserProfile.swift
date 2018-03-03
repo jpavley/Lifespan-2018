@@ -24,6 +24,7 @@ class UserProfile {
     var lifeExpectancy = RangedValue(min: 0, max: 120, setting: 83)
     var activityLevel = RangedValue(min: 0, max: 10, setting: 5)
     var stressLevel = RangedValue(min: 0, max: 10, setting: 5)
+    var livingOnBorrowedTime = false
     
     var dob: String {
         get {
