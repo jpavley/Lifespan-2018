@@ -132,7 +132,13 @@ class Lifespan {
         let age = thisYear - birthYear
         let percentOfLifeSpent = age/mALE
         
-        let timeSpent = 12 * percentOfLifeSpent
+        var timeSpent = 12 * percentOfLifeSpent
+        
+        // TODO: User is "living on borrowed time"
+        //       How to show that? Black clock face?
+        if timeSpent > 12.0 {
+            timeSpent = 12.0
+        }
         
         hourHandValue = Int(timeSpent.divisor)
         let hoursRemainder = timeSpent.remainder
