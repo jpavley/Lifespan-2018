@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
     @IBAction func birthYearSliderChanged(_ sender: Any) {
         let slider = sender as! UISlider
         let sliderValue = slider.value.rounded(.toNearestOrAwayFromZero)
-        birthYearField.text = "\(sliderValue)"
+        birthYearField.text = String(format: "%.0f", sliderValue)
         userProfile.birthYear.setting = sliderValue
     }
     
@@ -54,7 +54,7 @@ class ProfileViewController: UIViewController {
         birthYearSlider.minimumValue = userProfile.birthYear.min
         birthYearSlider.maximumValue = userProfile.birthYear.max
         birthYearSlider.value = userProfile.birthYear.setting
-        birthYearField.text = "\(userProfile.birthYear.setting)"
+        birthYearField.text = String(format: "%.0f", userProfile.birthYear.setting)
     }
     
     override func willMove(toParentViewController parent: UIViewController?) {
