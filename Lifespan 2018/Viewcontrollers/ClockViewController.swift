@@ -52,7 +52,7 @@ class ClockViewController: UIViewController {
     
     fileprivate func createLifeClockForUser() -> LifeClock {
         
-        let birthDate = Lifespan.stringToDate(dateString: userProfile.dob)
+        let birthDate = CalendarUtilities.stringToDate(dateString: userProfile.dob)
         lifeSpan = Lifespan(name: userProfile.name, dateOfBirth: birthDate!, averageLifeExpectancy: userProfile.ale)
         let spanTime = lifeSpan.lifespanAsTime()
         let lifeClock = LifeClock(time: spanTime!)

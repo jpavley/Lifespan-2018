@@ -126,7 +126,7 @@ class Lifespan {
         // 6. minuteHandValue = minutesSpent divisor
         // 7. secondHandValue = 60 * minutesSpent remainder
         
-        let cal = LifeClock.utcCal()
+        let cal = CalendarUtilities.utcCal()
         let birthYear = CGFloat(cal.component(.year, from: b.date))
         let thisYear = CGFloat(cal.component(.year, from: Date()))
         
@@ -151,20 +151,8 @@ class Lifespan {
         secondHandValue = Int(secondsSpent.divisor)
         
         let timeString = "\(hourHandValue):\(minuteHandValue):\(secondHandValue)"
-        let time = LifeClock.stringToTime(timeString: timeString)
+        let time = CalendarUtilities.stringToTime(timeString: timeString)
         
         return time
-    }
-    
-    /// Transforms a string into a Date object.
-    ///
-    /// - Parameter dateString: mm-dd-yyy
-    /// - Returns: Date based on mm-dd-yyy
-    static func stringToDate(dateString: String) -> Date? {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM-dd-yyyy"
-        // NOTE: Always work in UTC
-        formatter.timeZone = TimeZone(abbreviation: "UTC")
-        return formatter.date(from: dateString)
     }
 }

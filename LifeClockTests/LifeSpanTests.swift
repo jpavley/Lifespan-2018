@@ -21,8 +21,8 @@ class LifeSpanTests: XCTestCase {
     }
     
     func testStringToDate() {
-        let birthDate = Lifespan.stringToDate(dateString: "02-13-1961")
-        let cal = LifeClock.utcCal()
+        let birthDate = CalendarUtilities.stringToDate(dateString: "02-13-1961")
+        let cal = CalendarUtilities.utcCal()
         
         let birthMonth = cal.component(.month, from: birthDate!)
         print("birthMonth \(birthMonth)")
@@ -39,28 +39,28 @@ class LifeSpanTests: XCTestCase {
     }
     
     func testLifespanClass() {
-        let birthDate = Lifespan.stringToDate(dateString: "02-13-1961")
+        let birthDate = CalendarUtilities.stringToDate(dateString: "02-13-1961")
         let ls = Lifespan(name: "John", dateOfBirth: birthDate!, averageLifeExpectancy: 82.8)
         
         XCTAssertNotNil(ls)
     }
     
     func testLifespanAsTime() {
-        let birthDate = Lifespan.stringToDate(dateString: "02-13-1961")
+        let birthDate = CalendarUtilities.stringToDate(dateString: "02-13-1961")
         let ls = Lifespan(name: "John", dateOfBirth: birthDate!, averageLifeExpectancy: 82.8)
         
         let spanTime = ls.lifespanAsTime()
-        let expectedTime = LifeClock.stringToTime(timeString: "08:15:39")
+        let expectedTime = CalendarUtilities.stringToTime(timeString: "08:15:39")
         XCTAssertTrue(spanTime == expectedTime)
     }
     
     func testModifiedLifeExpectancy() {
-        let birthDate = Lifespan.stringToDate(dateString: "02-13-1961")
+        let birthDate = CalendarUtilities.stringToDate(dateString: "02-13-1961")
         let ls = Lifespan(name: "John", dateOfBirth: birthDate!, averageLifeExpectancy: 82.8)
         ls.spanModifiers!["activity"] = CGFloat(0.5)
         
         let spanTime = ls.lifespanAsTime()
-        let expectedTime = LifeClock.stringToTime(timeString: "07:52:02")
+        let expectedTime = CalendarUtilities.stringToTime(timeString: "07:52:02")
         XCTAssertTrue(spanTime == expectedTime)
         
     }

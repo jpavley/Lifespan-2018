@@ -74,7 +74,7 @@ class LifeClockTests: XCTestCase {
     func testHourHandAngle() {
         for (key, value) in testList {
             
-            let date = LifeClock.stringToTime(timeString: key)
+            let date = CalendarUtilities.stringToTime(timeString: key)
             let lc = LifeClock(time: date!)
             let hourHandAngle = lc.hourHandAngle
             
@@ -86,7 +86,7 @@ class LifeClockTests: XCTestCase {
     func testMinuteHandAngle() {
         for (key, value) in testList {
             
-            let date = LifeClock.stringToTime(timeString: key)
+            let date = CalendarUtilities.stringToTime(timeString: key)
             let lc = LifeClock(time: date!)
             let minuetHandAngle = lc.minuteHandAngle
             
@@ -100,7 +100,7 @@ class LifeClockTests: XCTestCase {
             print("")
             print("= testing time \(key), angle \(value.second)")
             
-            let date = LifeClock.stringToTime(timeString: key)
+            let date = CalendarUtilities.stringToTime(timeString: key)
             print("== date \(date!)")
             
             let lc = LifeClock(time: date!)

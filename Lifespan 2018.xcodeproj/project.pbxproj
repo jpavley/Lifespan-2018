@@ -16,6 +16,8 @@
 		1870D580203B3BBE0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
 		1870D588203B41C90041EF53 /* LifeClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D587203B41C90041EF53 /* LifeClockTests.swift */; };
 		1870D58F203B41CC0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
+		18B46E17204B420900BE808E /* CalendarUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B46E16204B420900BE808E /* CalendarUtilities.swift */; };
+		18B46E18204B42C200BE808E /* CalendarUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B46E16204B420900BE808E /* CalendarUtilities.swift */; };
 		18BC41E0204226370035648A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41DF204226370035648A /* MasterViewController.swift */; };
 		18BC41E2204226BB0035648A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E1204226BB0035648A /* ProfileViewController.swift */; };
 		18BC41E4204226C70035648A /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E3204226C70035648A /* AnalysisViewController.swift */; };
@@ -56,6 +58,7 @@
 		1870D585203B41C90041EF53 /* LifeClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1870D587203B41C90041EF53 /* LifeClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClockTests.swift; sourceTree = "<group>"; };
 		1870D589203B41C90041EF53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B46E16204B420900BE808E /* CalendarUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUtilities.swift; sourceTree = "<group>"; };
 		18BC41DF204226370035648A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		18BC41E1204226BB0035648A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18BC41E3204226C70035648A /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 				18BC41E9204253EF0035648A /* UserProfile.swift */,
 				489ABA422040700700227BFB /* Lifespan.swift */,
 				1870D57F203B3BBE0041EF53 /* LifeClock.swift */,
+				18B46E16204B420900BE808E /* CalendarUtilities.swift */,
 			);
 			path = "Life Classes";
 			sourceTree = "<group>";
@@ -279,6 +283,7 @@
 				48356CF5203F48B40015CD47 /* MinuteHandView.swift in Sources */,
 				48356CF2203E1C430015CD47 /* ClockView.swift in Sources */,
 				18BC41E2204226BB0035648A /* ProfileViewController.swift in Sources */,
+				18B46E17204B420900BE808E /* CalendarUtilities.swift in Sources */,
 				180D65FF203A0B9300661157 /* ClockViewController.swift in Sources */,
 				1870D580203B3BBE0041EF53 /* LifeClock.swift in Sources */,
 				18BC41E6204226D30035648A /* InfoViewController.swift in Sources */,
@@ -299,6 +304,7 @@
 				489ABA452040785D00227BFB /* LifeSpanTests.swift in Sources */,
 				18BC41EC204324D60035648A /* PrettyBackgroundView.swift in Sources */,
 				489ABA472040787900227BFB /* Lifespan.swift in Sources */,
+				18B46E18204B42C200BE808E /* CalendarUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
