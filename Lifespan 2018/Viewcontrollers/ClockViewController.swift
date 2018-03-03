@@ -10,6 +10,9 @@ import UIKit
 
 class ClockViewController: UIViewController {
     
+    @IBOutlet weak var remainingField: UILabel!
+    @IBOutlet weak var spentField: UILabel!
+    
     var lifeSpan: Lifespan!
     var lifeClock: LifeClock!
     var userProfile: UserProfile!
@@ -40,6 +43,9 @@ class ClockViewController: UIViewController {
     
     fileprivate func updateView() {
         updateLifeClock()
+        
+        remainingField.text = lifeSpan.clockDescriptionRemaining
+        spentField.text = lifeSpan.clockDescriptionSpent
     }
     
     fileprivate func updateLifeClock() {
@@ -48,6 +54,7 @@ class ClockViewController: UIViewController {
         
         // DEBUG
         print("lifeClock.time \(lifeClock.time) for user \(userProfile.name)")
+        
         if CalendarUtilities.stringToTime(timeString: "00:00:00") == lifeClock.time {
             userProfile.livingOnBorrowedTime = true
         } else {

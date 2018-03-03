@@ -101,18 +101,54 @@
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="SFP-ka-WAN"/>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 hrs * 3 min * 57 secs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kh-rm-tbU">
+                                        <rect key="frame" x="8" y="69.5" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 hr * 15 mins * 3 secs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brk-Kb-lGT">
+                                        <rect key="frame" x="8" y="442" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="remaining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvi-Ti-Sgf">
+                                        <rect key="frame" x="8" y="41" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                        <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="spent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtg-j2-vji">
+                                        <rect key="frame" x="8" y="470.5" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                        <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.83743780850000005" green="0.82031215310619299" blue="0.82031215310619299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="3t3-gx-DFu"/>
+                                    <constraint firstItem="7Kh-rm-tbU" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="8" id="HIh-3y-qMb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lvi-Ti-Sgf" secondAttribute="trailing" constant="8" id="Ito-UG-QeE"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="Osq-ls-qCG"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" id="Vjy-Uj-lkn"/>
+                                    <constraint firstItem="Dtg-j2-vji" firstAttribute="top" secondItem="brk-Kb-lGT" secondAttribute="bottom" constant="8" id="WqT-dx-Irb"/>
                                     <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="Xqm-HH-OJ5"/>
                                     <constraint firstAttribute="trailing" secondItem="zWF-o0-ohQ" secondAttribute="trailing" id="aqq-Ff-qXA"/>
+                                    <constraint firstItem="Dtg-j2-vji" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="8" id="czC-qQ-JHO"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="eSu-ii-wGD"/>
                                     <constraint firstItem="NIt-ug-uy7" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="gsP-bw-0pE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dtg-j2-vji" secondAttribute="trailing" constant="8" id="jdE-1k-STh"/>
+                                    <constraint firstAttribute="trailing" secondItem="brk-Kb-lGT" secondAttribute="trailing" constant="8" id="kw0-8I-tkN"/>
+                                    <constraint firstItem="brk-Kb-lGT" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="8" id="laZ-12-KAw"/>
                                     <constraint firstItem="XGT-bL-gFb" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="pE3-v1-VpM"/>
+                                    <constraint firstItem="7Kh-rm-tbU" firstAttribute="top" secondItem="Lvi-Ti-Sgf" secondAttribute="bottom" constant="8" id="pjo-Bs-BIW"/>
+                                    <constraint firstItem="brk-Kb-lGT" firstAttribute="top" secondItem="ZSH-T8-3tQ" secondAttribute="bottom" constant="16" id="qAx-YC-ayS"/>
+                                    <constraint firstItem="ZSH-T8-3tQ" firstAttribute="top" secondItem="7Kh-rm-tbU" secondAttribute="bottom" constant="16" id="qdE-Vt-PIa"/>
+                                    <constraint firstItem="Lvi-Ti-Sgf" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="8" id="qyT-9g-ea4"/>
                                     <constraint firstItem="XGT-bL-gFb" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="rq7-qf-o4l"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Kh-rm-tbU" secondAttribute="trailing" constant="8" id="tFR-dV-UlJ"/>
                                     <constraint firstItem="NIt-ug-uy7" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="u0o-48-vO6"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -137,6 +173,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="remainingField" destination="7Kh-rm-tbU" id="Fuz-nm-18X"/>
+                        <outlet property="spentField" destination="brk-Kb-lGT" id="apC-qn-gLP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
