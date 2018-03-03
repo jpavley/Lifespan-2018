@@ -45,17 +45,18 @@ class ClockViewController: UIViewController {
     fileprivate func updateLifeClock() {
         lifeClock = createLifeClockForUser()
         setClock(with: lifeClock)
+        
+        // DEBUG
+        print("lifeClock.time \(lifeClock.time) for user \(userProfile.name)")
     }
     
     fileprivate func createLifeClockForUser() -> LifeClock {
         
-        // DEBUG
-        print("ale \(userProfile.ale)")
-        
         let birthDate = Lifespan.stringToDate(dateString: userProfile.dob)
         lifeSpan = Lifespan(name: userProfile.name, dateOfBirth: birthDate!, averageLifeExpectancy: userProfile.ale)
         let spanTime = lifeSpan.lifespanAsTime()
-        return LifeClock(time: spanTime!)
+        let lifeClock = LifeClock(time: spanTime!)
+        return lifeClock
     }
     
     fileprivate func setClock(with lifeClock: LifeClock) {

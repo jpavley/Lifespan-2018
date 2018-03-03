@@ -22,14 +22,15 @@ class LifeSpanTests: XCTestCase {
     
     func testStringToDate() {
         let birthDate = Lifespan.stringToDate(dateString: "02-13-1961")
+        let cal = LifeClock.utcCal()
         
-        let birthMonth = Calendar.current.component(.month, from: birthDate!)
+        let birthMonth = cal.component(.month, from: birthDate!)
         print("birthMonth \(birthMonth)")
         
-        let birthDay = Calendar.current.component(.day, from: birthDate!)
+        let birthDay = cal.component(.day, from: birthDate!)
         print("birthDay \(birthDay)")
 
-        let birthYear = Calendar.current.component(.year, from: birthDate!)
+        let birthYear = cal.component(.year, from: birthDate!)
         print("birthYear \(birthYear)")
 
         XCTAssertTrue(birthMonth == 2)
@@ -49,7 +50,7 @@ class LifeSpanTests: XCTestCase {
         let ls = Lifespan(name: "John", dateOfBirth: birthDate!, averageLifeExpectancy: 82.8)
         
         let spanTime = ls.lifespanAsTime()
-        let expectedTime = LifeClock.stringToDate(dateString: "08:15:39")
+        let expectedTime = LifeClock.stringToTime(timeString: "08:15:39")
         XCTAssertTrue(spanTime == expectedTime)
     }
     
@@ -59,7 +60,7 @@ class LifeSpanTests: XCTestCase {
         ls.spanModifiers!["activity"] = CGFloat(0.5)
         
         let spanTime = ls.lifespanAsTime()
-        let expectedTime = LifeClock.stringToDate(dateString: "08:15:39")
+        let expectedTime = LifeClock.stringToTime(timeString: "07:52:02")
         XCTAssertTrue(spanTime == expectedTime)
         
     }

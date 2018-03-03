@@ -36,7 +36,8 @@ class LifeClock: CustomStringConvertible {
     
     var hourHandAngle: CGFloat {
         get {
-            let hour = Calendar.current.component(.hour, from: time)
+            let cal = LifeClock.utcCal()
+            let hour = cal.component(.hour, from: time)
             let minutes = Calendar.current.component(.minute, from: time)
             let totalMinutes = (60 * hour) + minutes
             let angle = ωHourHand * CGFloat(totalMinutes)
@@ -45,15 +46,17 @@ class LifeClock: CustomStringConvertible {
     }
     var minuteHandAngle: CGFloat {
         get {
-            let minutes = Calendar.current.component(.minute, from: time)
-            let seconds = Calendar.current.component(.second, from: time)
+            let cal = LifeClock.utcCal()
+            let minutes = cal.component(.minute, from: time)
+            let seconds = cal.component(.second, from: time)
             return ωMinuteHand * CGFloat((60 * minutes) + seconds)
         }
     }
     
     var secondHandAngle: CGFloat {
         get {
-            let seconds = Calendar.current.component(.second, from: time)
+            let cal = LifeClock.utcCal()
+            let seconds = cal.component(.second, from: time)
             return ωSecondHand * CGFloat(seconds)
         }
     }
@@ -67,13 +70,28 @@ class LifeClock: CustomStringConvertible {
     
     /// Transforms a string into a Date object. mm-dd-yyy doesn't matter.
     /// It's mapping a lifespan to the hands of an analog clock.
+    /// See http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns
     ///
     /// - Parameter dateString: hh:mm:ss
     /// - Returns: Date based on hh:mm:ss
-    static func stringToDate(dateString: String) -> Date? {
-        // TODO: Rename function stringToTime
+    static func stringToTime(timeString: String) -> Time? {
         let formatter = DateFormatter()
         formatter.dateFormat = "hh:mm:ss"
-        return formatter.date(from: dateString)
+        // NOTE: Always work in UTC
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        let time = formatter.date(from: timeString)
+        return time
+    }
+    
+    /// Creates a calendar object based on UTC time.
+    /// Calendar.current returns a calender object based in what ever
+    /// time zone you're in. This function always returns a calendar
+    /// object based in UTC time.
+    ///
+    /// - Returns: Calendar with time zone set to UTC
+    static func utcCal() -> Calendar {
+        var cal = Calendar.current
+        cal.timeZone = TimeZone(abbreviation: "UTC")!
+        return cal
     }
 }
