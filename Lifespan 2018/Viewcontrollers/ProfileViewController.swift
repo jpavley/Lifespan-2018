@@ -36,11 +36,6 @@ class ProfileViewController: UIViewController {
         
         let userAge = CalendarUtilities.thisYear() - userProfile.birthYear.setting
         
-        // DEBUG
-//        print("")
-//        print("birthYear      \(userProfile.birthYear.min),    \(userProfile.birthYear.max),   \(userProfile.birthYear.setting)")
-//        print("lifeExpectancy \(userProfile.lifeExpectancy.min),      \(userProfile.lifeExpectancy.max),      \(userProfile.lifeExpectancy.setting)")
-
         userProfile.lifeExpectancy.min = userAge
         
         lifeExpectancySlider.minimumValue = userAge
@@ -101,6 +96,12 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func debugSliderValues() {
+        print("")
+        print("birthYear      \(userProfile.birthYear.min), \(userProfile.birthYear.max), \(userProfile.birthYear.setting)")
+        print("lifeExpectancy \(userProfile.lifeExpectancy.min), \(userProfile.lifeExpectancy.max), \(userProfile.lifeExpectancy.setting)")
     }
     
     /*
