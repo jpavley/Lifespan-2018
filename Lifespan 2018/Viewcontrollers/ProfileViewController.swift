@@ -33,6 +33,17 @@ class ProfileViewController: UIViewController {
         let sliderValue = slider.value.rounded(.toNearestOrAwayFromZero)
         birthYearField.text = String(format: "%.0f", sliderValue)
         userProfile.birthYear.setting = sliderValue
+        
+        let userAge = CalendarUtilities.thisYear() - userProfile.birthYear.setting
+        print("userProfile.lifeExpectancy \(userProfile.lifeExpectancy.min), \(userProfile.lifeExpectancy.max), \(userProfile.lifeExpectancy.setting)")
+        userProfile.lifeExpectancy.min = userAge
+        
+        lifeExpectancySlider.minimumValue = userAge
+        if userProfile.lifeExpectancy.setting < userAge {
+            userProfile.lifeExpectancy.setting = userAge
+            lifeExpectancyField.text = String(format: "%.0f", userAge)
+            lifeExpectancySlider.value = userAge
+        }
     }
     
     @IBAction func lifeExpectancySliderChanged(_ sender: Any) {

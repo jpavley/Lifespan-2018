@@ -19,12 +19,29 @@ struct RangedValue {
 /// A good source for life expentancy is // https://www.ssa.gov/planners/lifeexpectancy.html
 class UserProfile {
     
-    var name = "john"
-    var birthYear = RangedValue(min: 1900, max: CalendarUtilities.thisYear(), setting: 1961)
-    var lifeExpectancy = RangedValue(min: 0, max: 120, setting: 83)
-    var activityLevel = RangedValue(min: 0, max: 10, setting: 5)
-    var stressLevel = RangedValue(min: 0, max: 10, setting: 5)
-    var livingOnBorrowedTime = false
+    var name:String
+    
+    var birthYear: RangedValue
+    var lifeExpectancy: RangedValue
+    var activityLevel: RangedValue
+    var stressLevel: RangedValue
+    var livingOnBorrowedTime: Bool
+    
+    init() {
+        name = "John1234"
+        
+        let birthYearMin = CalendarUtilities.thisYear() - 120
+        let birthYearMax = CalendarUtilities.thisYear()
+        birthYear = RangedValue(min: birthYearMin, max: birthYearMax, setting: 1961)
+        
+        let lifeExpectancyMin = CalendarUtilities.thisYear() - birthYear.setting
+        lifeExpectancy = RangedValue(min: lifeExpectancyMin, max: 120, setting: 83)
+        
+        activityLevel = RangedValue(min: 0, max: 10, setting: 5)
+        stressLevel = RangedValue(min: 0, max: 10, setting: 5)
+        
+        livingOnBorrowedTime = false
+    }
     
     var dob: String {
         get {
