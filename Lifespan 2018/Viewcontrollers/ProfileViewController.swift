@@ -28,19 +28,43 @@ class ProfileViewController: UIViewController {
         userProfile.name = nameField.text!
     }
     
+    
+    /// Update the birth year and life expectancy sliders.
+    /// As birth year changes life expectancy min and current setting changes:
+    /// - You can't live less than your current age.
+    /// - Your live expectancy has to be more than your current age.
+    ///
+    /// This logic should really be in the UserProfile object but
+    /// UserProject should not know about the UX. So it here and
+    /// not there.
+    ///
+    /// - Parameter sender: birth year slider as a generic object
     @IBAction func birthYearSliderChanged(_ sender: Any) {
         let slider = sender as! UISlider
         let sliderValue = slider.value.rounded(.toNearestOrAwayFromZero)
         birthYearField.text = String(format: "%.0f", sliderValue)
+        
+        // set birth year
         userProfile.birthYear.setting = sliderValue
         
+        // when the birth year changes the min value of life expenctancy changes
+        // (cant live live shorter than your current age!)
         let userAge = CalendarUtilities.thisYear() - userProfile.birthYear.setting
         
+        // set live expectancy min
         userProfile.lifeExpectancy.min = userAge
         
+        // update the slider to reflect the change
         lifeExpectancySlider.minimumValue = userAge
+        
+        // if the current life expectancy is now less than the user's age
+        // update life expectancy to the user's age
         if userProfile.lifeExpectancy.setting < userAge {
+            
+            // set life expectancy
             userProfile.lifeExpectancy.setting = userAge
+            
+            // update the UX to refect the change
             lifeExpectancyField.text = String(format: "%.0f", userAge)
             lifeExpectancySlider.value = userAge
         }
@@ -50,6 +74,8 @@ class ProfileViewController: UIViewController {
         let slider = sender as! UISlider
         let sliderValue = slider.value.rounded(.toNearestOrAwayFromZero)
         lifeExpectancyField.text = String(format: "%.0f", sliderValue)
+        
+        // set life expectancy
         userProfile.lifeExpectancy.setting = sliderValue
     }
 
