@@ -35,7 +35,12 @@ class ProfileViewController: UIViewController {
         userProfile.birthYear.setting = sliderValue
         
         let userAge = CalendarUtilities.thisYear() - userProfile.birthYear.setting
-        print("userProfile.lifeExpectancy \(userProfile.lifeExpectancy.min), \(userProfile.lifeExpectancy.max), \(userProfile.lifeExpectancy.setting)")
+        
+        // DEBUG
+//        print("")
+//        print("birthYear      \(userProfile.birthYear.min),    \(userProfile.birthYear.max),   \(userProfile.birthYear.setting)")
+//        print("lifeExpectancy \(userProfile.lifeExpectancy.min),      \(userProfile.lifeExpectancy.max),      \(userProfile.lifeExpectancy.setting)")
+
         userProfile.lifeExpectancy.min = userAge
         
         lifeExpectancySlider.minimumValue = userAge
