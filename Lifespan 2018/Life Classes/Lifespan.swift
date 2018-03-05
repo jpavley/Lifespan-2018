@@ -86,6 +86,12 @@ class Lifespan {
         }
     }
     
+    
+    /// Calcuates and returns ALE with span modifiers applied.
+    /// Currently all span modifiers have the same impact on
+    /// Lifespan: increases 10% of lifespan by modifier value.
+    /// Thus a modifier with value of 10 increases lifespan by
+    /// 10%.
     var modifiedALE: CGFloat? {
         guard let spanModifiers = spanModifiers, let ale = averageLifeExpectancy else {
             return nil

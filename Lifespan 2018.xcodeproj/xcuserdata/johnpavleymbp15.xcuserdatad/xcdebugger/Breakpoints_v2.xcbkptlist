@@ -9,54 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Lifespan 2018/Life Classes/Lifespan.swift"
-            timestampString = "541602869.846007"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "lifespanAsTime()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Lifespan_2018.Lifespan.lifespanAsTime() -&gt; Swift.Optional&lt;Foundation.Date&gt;"
-                  moduleName = "Lifespan 2018"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/johnpavleymbp15/Development/Apple/Lifespan-2018/Lifespan%202018/Life%20Classes/Lifespan.swift"
-                  timestampString = "541602869.856245"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "129"
-                  endingLineNumber = "129"
-                  offsetFromSymbolStart = "452">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LifeClockTests.Lifespan.lifespanAsTime() -&gt; Swift.Optional&lt;Foundation.Date&gt;"
-                  moduleName = "LifeClockTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/johnpavleymbp15/Development/Apple/Lifespan-2018/Lifespan%202018/Life%20Classes/Lifespan.swift"
-                  timestampString = "541602870.789825"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "129"
-                  endingLineNumber = "129"
-                  offsetFromSymbolStart = "452">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "LifeClockTests/LifeSpanTests.swift"
             timestampString = "541602869.846085"
             startingColumnNumber = "9223372036854775807"
