@@ -40,18 +40,35 @@ class Lifespan {
     var minuteHandValue = 0
     var secondHandValue = 0
     
+    var hoursRemaining: Int {
+        
+        if minuteHandValue == 0 && secondHandValue == 0 {
+            return 12 - hourHandValue
+        } else {
+            // minuets and seconds eat into the final hour
+            return 11 - hourHandValue
+        }
+    }
+    
+    var minutesRemaining: Int {
+        if secondHandValue == 0 {
+            return 60 - minuteHandValue
+        } else {
+            // seconds eat into the final second
+            return 59 - minuteHandValue
+        }
+    }
+    
+    var secondsRemaining: Int {
+        return 60 - secondHandValue
+    }
+    
     var clockDescriptionRemaining: String {
-        let hoursRemaining = 12 - hourHandValue
-        let minutesRemaining = 60 - minuteHandValue
-        let secondsRemaining = 60 - secondHandValue
         return "\(hoursRemaining) hours ✳︎ \(minutesRemaining) minutes ✳︎ \(secondsRemaining) seconds"
     }
     
     var clockDescriptionSpent: String {
-        let hoursRemaining = hourHandValue
-        let minutesRemaining = minuteHandValue
-        let secondsRemaining = secondHandValue
-        return "\(hoursRemaining) hours ✳︎ \(minutesRemaining) minutes ✳︎ \(secondsRemaining) seconds"
+        return "\(hourHandValue) hours ✳︎ \(minuteHandValue) minutes ✳︎ \(secondHandValue) seconds"
     }
     
     var clockKeyYears: String {

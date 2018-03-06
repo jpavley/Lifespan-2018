@@ -64,4 +64,22 @@ class LifeSpanTests: XCTestCase {
         XCTAssertTrue(spanTime == expectedTime)
         
     }
+    
+    func testLieTimeRemaining() {
+        let birthDate = CalendarUtilities.stringToDate(dateString: "02-13-1961")
+        let ls = Lifespan(name: "John", dateOfBirth: birthDate!, averageLifeExpectancy: 82.8)
+        let _ = ls.lifespanAsTime() // forces calucation of hourHandValue, minuetHandValue, secondHandValue
+        
+        let hoursRemaining = ls.hoursRemaining
+        let expectedHoursRemaining = 3
+        XCTAssertTrue(hoursRemaining == expectedHoursRemaining)
+        
+        let minutesRemaining = ls.minutesRemaining
+        let expectedMinutesRemaining = 44
+        XCTAssertTrue(minutesRemaining == expectedMinutesRemaining)
+
+        let secondsRemaining = ls.secondsRemaining
+        let expectedSecondsRemaining = 21
+        XCTAssertTrue(secondsRemaining == expectedSecondsRemaining)
+    }
 }
