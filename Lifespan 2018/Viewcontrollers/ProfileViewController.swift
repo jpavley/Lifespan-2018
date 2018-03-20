@@ -40,15 +40,14 @@ class ProfileViewController: UIViewController {
     ///
     /// - Parameter sender: birth year slider as a generic object
     @IBAction func birthYearSliderChanged(_ sender: Any) {
-        let slider = sender as! UISlider
-        let sliderValue = slider.value.rounded(.toNearestOrAwayFromZero)
+        let sliderValue = birthYearSlider.value.rounded(.toNearestOrAwayFromZero)
         birthYearField.text = String(format: "%.0f", sliderValue)
         
         // set birth year
         userProfile.birthYear.setting = sliderValue
         
         // when the birth year changes the min value of life expenctancy changes
-        // (cant live live shorter than your current age!)
+        // (cant live live less than your current age!)
         let userAge = CalendarUtilities.thisYear() - userProfile.birthYear.setting
         
         // set live expectancy min
@@ -71,8 +70,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func lifeExpectancySliderChanged(_ sender: Any) {
-        let slider = sender as! UISlider
-        let sliderValue = slider.value.rounded(.toNearestOrAwayFromZero)
+        let sliderValue = lifeExpectancySlider.value.rounded(.toNearestOrAwayFromZero)
         lifeExpectancyField.text = String(format: "%.0f", sliderValue)
         
         // set life expectancy
@@ -80,11 +78,20 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func activityLevelChanged(_ sender: Any) {
+        let sliderValue = activityLevelSlider.value.rounded(.toNearestOrAwayFromZero)
+        activityLevelField.text = String(format: "%.0f", sliderValue)
+        
+        // set actively level
+        userProfile.activityLevel.setting = sliderValue
     }
 
     @IBAction func stressLevelSliderChanged(_ sender: Any) {
+        let sliderValue = stressLevelSlider.value.rounded(.toNearestOrAwayFromZero)
+        stressLevelField.text = String(format: "%.0f", sliderValue)
+        
+        // set stress level
+        userProfile.stressLevel.setting = sliderValue
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,6 +101,8 @@ class ProfileViewController: UIViewController {
         nameField.text = userProfile.name
         updateBirthYear()
         updateLifeExpentency()
+        updateActivityLevel()
+        updateStressLevel()
     }
     
     fileprivate func updateBirthYear() {
@@ -108,6 +117,20 @@ class ProfileViewController: UIViewController {
         lifeExpectancySlider.maximumValue = userProfile.lifeExpectancy.max
         lifeExpectancySlider.value = userProfile.lifeExpectancy.setting
         lifeExpectancyField.text = String(format: "%.0f", userProfile.lifeExpectancy.setting)
+    }
+    
+    fileprivate func updateActivityLevel() {
+        activityLevelSlider.minimumValue = userProfile.activityLevel.min
+        activityLevelSlider.maximumValue = userProfile.activityLevel.max
+        activityLevelSlider.value = userProfile.activityLevel.setting
+        activityLevelField.text = String(format: "%.0f", userProfile.activityLevel.setting)
+    }
+    
+    fileprivate func updateStressLevel() {
+        stressLevelSlider.minimumValue = userProfile.stressLevel.min
+        stressLevelSlider.maximumValue = userProfile.stressLevel.max
+        stressLevelSlider.value = userProfile.stressLevel.setting
+        stressLevelField.text = String(format: "%.0f", userProfile.stressLevel.setting)
     }
     
     override func willMove(toParentViewController parent: UIViewController?) {

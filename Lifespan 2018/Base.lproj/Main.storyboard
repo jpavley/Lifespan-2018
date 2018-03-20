@@ -250,8 +250,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WnW-Ri-xl3" userLabel="Life Expentency Group">
                                 <rect key="frame" x="16" y="238" width="288" height="96"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Total Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG8-mT-rbN">
-                                        <rect key="frame" x="0.0" y="11" width="165" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Expectancy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG8-mT-rbN">
+                                        <rect key="frame" x="0.0" y="11" width="122" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -294,6 +294,9 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rRc-be-hf0">
                                         <rect key="frame" x="-2" y="46" width="292" height="31"/>
+                                        <connections>
+                                            <action selector="activityLevelChanged:" destination="taZ-hl-SfQ" eventType="valueChanged" id="ZNy-Zh-RK7"/>
+                                        </connections>
                                     </slider>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n86-gh-aF5">
                                         <rect key="frame" x="183" y="8" width="97" height="30"/>
@@ -327,6 +330,9 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2EQ-gx-vWg">
                                         <rect key="frame" x="-2" y="46" width="292" height="31"/>
+                                        <connections>
+                                            <action selector="stressLevelSliderChanged:" destination="taZ-hl-SfQ" eventType="valueChanged" id="Kv7-cP-Pt0"/>
+                                        </connections>
                                     </slider>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMc-rX-bdn">
                                         <rect key="frame" x="183" y="8" width="97" height="30"/>
