@@ -18,6 +18,12 @@ struct LifeEvent {
     var date: Date
 }
 
+struct SpanModifier {
+    var name: String
+    var value: CGFloat
+    var positive: Bool
+}
+
 extension CGFloat {
     var divisor: CGFloat {
         return self.rounded(.down)
@@ -34,7 +40,7 @@ class Lifespan {
     var death: LifeEvent?
     var lifeEvents: [Lifespan]?
     var averageLifeExpectancy: CGFloat?
-    var spanModifiers: [String:CGFloat]?
+    var spanModifiers: [SpanModifier]?
     
     var hourHandValue = 0
     var minuteHandValue = 0
@@ -116,7 +122,11 @@ class Lifespan {
         
         var modifiedALE = averageLifeExpectancy!
         for mod in spanModifiers {
-            modifiedALE += (ale * 0.1) * mod.value
+            if mod.positive {
+                modifiedALE += (ale * 0.1) * mod.value
+            } else {
+                modifiedALE -= (ale * 0.1) * mod.value
+            }
         }
         
         return modifiedALE
@@ -127,7 +137,7 @@ class Lifespan {
         self.name = name
         birth = LifeEvent(title: "Birth", description: "", date: dateOfBirth)
         self.averageLifeExpectancy = averageLifeExpectancy
-        spanModifiers = [String:CGFloat]()
+        spanModifiers = [SpanModifier]()
     }
     
     /// Models lifespan as 12 hour half-day from noon to midnight.

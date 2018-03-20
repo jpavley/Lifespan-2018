@@ -13,7 +13,6 @@ struct RangedValue {
     var min:Float = 0.0
     var max:Float = 1.0
     var setting:Float = 0.5
-    var positiveEffect = true
 }
 
 /// Models a user of Lifespan.
@@ -33,13 +32,13 @@ class UserProfile {
         
         let birthYearMin = CalendarUtilities.thisYear() - 120
         let birthYearMax = CalendarUtilities.thisYear()
-        birthYear = RangedValue(min: birthYearMin, max: birthYearMax, setting: 1961, positiveEffect: true)
+        birthYear = RangedValue(min: birthYearMin, max: birthYearMax, setting: 1961)
         
         let lifeExpectancyMin = CalendarUtilities.thisYear() - birthYear.setting
-        lifeExpectancy = RangedValue(min: lifeExpectancyMin, max: 120, setting: 83, positiveEffect: true)
+        lifeExpectancy = RangedValue(min: lifeExpectancyMin, max: 120, setting: 83)
         
-        activityLevel = RangedValue(min: 0, max: 10, setting: 5, positiveEffect: true)
-        stressLevel = RangedValue(min: 0, max: 10, setting: 5, positiveEffect: false)
+        activityLevel = RangedValue(min: 0, max: 10, setting: 5)
+        stressLevel = RangedValue(min: 0, max: 10, setting: 5)
         
         livingOnBorrowedTime = false
     }

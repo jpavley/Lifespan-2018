@@ -67,9 +67,12 @@ class ClockViewController: UIViewController {
         let birthDate = CalendarUtilities.stringToDate(dateString: userProfile.dob)
         lifeSpan = Lifespan(name: userProfile.name, dateOfBirth: birthDate!, averageLifeExpectancy: userProfile.ale)
         
-        lifeSpan.spanModifiers!["activityLevel"] = CGFloat(userProfile.activityLevel.setting)
-        lifeSpan.spanModifiers!["stressLevel"] = CGFloat(userProfile.stressLevel.setting)
+        let activityLevelMod = SpanModifier(name: "activityLevel", value: CGFloat(userProfile.activityLevel.setting), positive: true)
+        lifeSpan.spanModifiers?.append(activityLevelMod)
         
+        let stressLevelMod = SpanModifier(name: "stressLevel", value: CGFloat(userProfile.stressLevel.setting), positive: false)
+        lifeSpan.spanModifiers?.append(stressLevelMod)
+
         let spanTime = lifeSpan.lifespanAsTime()
         let lifeClock = LifeClock(time: spanTime!)
         return lifeClock
