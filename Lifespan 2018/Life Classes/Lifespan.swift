@@ -114,7 +114,7 @@ class Lifespan {
     /// Currently all span modifiers have the same impact on
     /// Lifespan: increases 10% of lifespan by modifier value.
     /// Thus a modifier with value of 10 increases lifespan by
-    /// 10%.
+    /// 10%. ALE must be between 0 and 120
     var modifiedALE: CGFloat? {
         guard let spanModifiers = spanModifiers, let ale = averageLifeExpectancy else {
             return nil
@@ -135,6 +135,14 @@ class Lifespan {
 //            print("mod name \(mod.name), value \(mod.value), positive \(mod.positive), impact \(modImpact)")
 //            print("modifiedALE \(modifiedALE)")
 
+        }
+        
+        if modifiedALE > 120 {
+            modifiedALE = 120
+        }
+        
+        if modifiedALE < 0 {
+            modifiedALE = 0
         }
         
         return modifiedALE
@@ -172,7 +180,11 @@ class Lifespan {
         let thisYear = CGFloat(cal.component(.year, from: Date()))
         
         let age = thisYear - birthYear
-        let percentOfLifeSpent = age/mALE
+        
+        var percentOfLifeSpent: CGFloat = 0
+        if mALE > 0 {
+            percentOfLifeSpent = age/mALE
+        }
         
         var timeSpent = 12 * percentOfLifeSpent
         
