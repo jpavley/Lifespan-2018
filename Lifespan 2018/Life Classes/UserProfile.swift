@@ -10,9 +10,9 @@ import Foundation
 import CoreGraphics
 
 struct RangedValue {
-    var min:Float = 0.0
-    var max:Float = 1.0
-    var setting:Float = 0.5
+    var min: Float = 0.0
+    var max: Float = 1.0
+    var setting: Float = 0.5
 }
 
 /// Models a user of Lifespan.
@@ -28,7 +28,7 @@ class UserProfile {
     var livingOnBorrowedTime: Bool
     
     init() {
-        name = "John1234"
+        name = "John F. Pavley"
         
         let birthYearMin = CalendarUtilities.thisYear() - 120
         let birthYearMax = CalendarUtilities.thisYear()

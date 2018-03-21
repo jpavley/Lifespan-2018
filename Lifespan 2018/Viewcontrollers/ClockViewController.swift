@@ -10,8 +10,9 @@ import UIKit
 
 class ClockViewController: UIViewController {
     
-    @IBOutlet weak var remainingField: UILabel!
-    @IBOutlet weak var spentField: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var timeSpanLabel: UILabel!
+    @IBOutlet weak var agedLabel: UILabel!
     
     var lifeSpan: Lifespan!
     var lifeClock: LifeClock!
@@ -43,8 +44,15 @@ class ClockViewController: UIViewController {
     fileprivate func updateView() {
         updateLifeClock()
         
-        remainingField.text = lifeSpan.clockDescriptionRemaining
-        spentField.text = lifeSpan.clockDescriptionSpent
+        userNameLabel.text = userProfile.name
+        
+        let birthYear = String(format: "%.0f", userProfile.birthYear.setting)
+        let deathYear = String(format: "%.0f", CGFloat(userProfile.birthYear.setting) + lifeSpan.modifiedALE!)
+        timeSpanLabel.text = "\(birthYear) to \(deathYear)"
+        
+        let age = String(format: "%.0f", lifeSpan.modifiedALE!)
+        agedLabel.text = "Aged \(age)"
+        
     }
     
     fileprivate func updateLifeClock() {
