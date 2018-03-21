@@ -64,31 +64,29 @@
                                         </constraints>
                                     </view>
                                     <view opaque="NO" tag="200" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSH-T8-3tQ" userLabel="Minuet Hand" customClass="MinuteHandView" customModule="Lifespan_2018" customModuleProvider="target">
-                                        <rect key="frame" x="-8" y="106" width="320" height="320"/>
+                                        <rect key="frame" x="4" y="118" width="296" height="296"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZSH-T8-3tQ" secondAttribute="height" multiplier="1:1" id="8g8-Dm-PZd"/>
-                                            <constraint firstAttribute="width" constant="320" id="a9h-SQ-4Re"/>
                                             <constraint firstAttribute="width" secondItem="ZSH-T8-3tQ" secondAttribute="height" multiplier="1:1" id="vul-By-bUi"/>
                                         </constraints>
                                     </view>
                                     <view opaque="NO" tag="300" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIt-ug-uy7" userLabel="Hour Hand" customClass="HourHandView" customModule="Lifespan_2018" customModuleProvider="target">
-                                        <rect key="frame" x="-8" y="106" width="320" height="320"/>
+                                        <rect key="frame" x="4" y="118" width="296" height="296"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="NIt-ug-uy7" secondAttribute="height" multiplier="1:1" id="77b-vB-49c"/>
-                                            <constraint firstAttribute="width" constant="320" id="AvE-4I-qqt"/>
                                             <constraint firstAttribute="width" secondItem="NIt-ug-uy7" secondAttribute="height" multiplier="1:1" id="RuH-CQ-UCS"/>
                                             <constraint firstAttribute="width" secondItem="NIt-ug-uy7" secondAttribute="height" multiplier="1:1" id="u7G-BH-5xg"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="b16-4v-DFG"/>
                                     </view>
                                     <view opaque="NO" tag="400" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-bL-gFb" userLabel="Second Hand" customClass="SecondHandView" customModule="Lifespan_2018" customModuleProvider="target">
-                                        <rect key="frame" x="-8" y="106" width="320" height="320"/>
+                                        <rect key="frame" x="4" y="118" width="296" height="296"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                         </accessibility>
@@ -96,7 +94,6 @@
                                             <constraint firstAttribute="width" secondItem="XGT-bL-gFb" secondAttribute="height" multiplier="1:1" id="12z-BI-GUZ"/>
                                             <constraint firstAttribute="width" secondItem="XGT-bL-gFb" secondAttribute="height" multiplier="1:1" id="VsP-x5-hRg"/>
                                             <constraint firstAttribute="width" secondItem="XGT-bL-gFb" secondAttribute="height" multiplier="1:1" id="bBf-IJ-b9G"/>
-                                            <constraint firstAttribute="width" constant="320" id="m61-h1-eO5"/>
                                             <constraint firstAttribute="width" secondItem="XGT-bL-gFb" secondAttribute="height" multiplier="1:1" id="z6i-zu-15h"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="SFP-ka-WAN"/>
@@ -128,6 +125,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ZSH-T8-3tQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="3t3-gx-DFu"/>
+                                    <constraint firstItem="NIt-ug-uy7" firstAttribute="width" secondItem="zWF-o0-ohQ" secondAttribute="width" id="Ahs-nQ-0TK"/>
                                     <constraint firstItem="7Kh-rm-tbU" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="8" id="HIh-3y-qMb"/>
                                     <constraint firstAttribute="trailing" secondItem="Lvi-Ti-Sgf" secondAttribute="trailing" constant="8" id="Ito-UG-QeE"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="Osq-ls-qCG"/>
@@ -136,6 +134,7 @@
                                     <constraint firstItem="Dtg-j2-vji" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="8" id="czC-qQ-JHO"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="eSu-ii-wGD"/>
                                     <constraint firstItem="NIt-ug-uy7" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="gsP-bw-0pE"/>
+                                    <constraint firstItem="ZSH-T8-3tQ" firstAttribute="width" secondItem="zWF-o0-ohQ" secondAttribute="width" id="i4p-JJ-WKc"/>
                                     <constraint firstAttribute="trailing" secondItem="Dtg-j2-vji" secondAttribute="trailing" constant="8" id="jdE-1k-STh"/>
                                     <constraint firstAttribute="trailing" secondItem="brk-Kb-lGT" secondAttribute="trailing" constant="8" id="kw0-8I-tkN"/>
                                     <constraint firstItem="brk-Kb-lGT" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="8" id="laZ-12-KAw"/>
@@ -146,6 +145,7 @@
                                     <constraint firstItem="Lvi-Ti-Sgf" firstAttribute="leading" secondItem="mDl-FG-6dh" secondAttribute="leading" constant="8" id="qyT-9g-ea4"/>
                                     <constraint firstItem="XGT-bL-gFb" firstAttribute="centerY" secondItem="mDl-FG-6dh" secondAttribute="centerY" id="rq7-qf-o4l"/>
                                     <constraint firstAttribute="trailing" secondItem="7Kh-rm-tbU" secondAttribute="trailing" constant="8" id="tFR-dV-UlJ"/>
+                                    <constraint firstItem="XGT-bL-gFb" firstAttribute="width" secondItem="zWF-o0-ohQ" secondAttribute="width" id="tex-vo-RET"/>
                                     <constraint firstItem="NIt-ug-uy7" firstAttribute="centerX" secondItem="mDl-FG-6dh" secondAttribute="centerX" id="u0o-48-vO6"/>
                                     <constraint firstItem="zWF-o0-ohQ" firstAttribute="width" secondItem="mDl-FG-6dh" secondAttribute="width" constant="-8" id="yDt-Jc-dbf"/>
                                 </constraints>
