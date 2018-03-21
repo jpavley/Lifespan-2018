@@ -27,10 +27,9 @@ class ClockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        updateView()
     }
     
+    // TODO: willMove is called twice at startup, which means LifeClock is created twice
     override func willMove(toParentViewController parent: UIViewController?) {
         if parent == nil {
             return
