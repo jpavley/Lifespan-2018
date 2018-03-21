@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     var userProfile: UserProfile!
     
@@ -27,7 +27,6 @@ class ProfileViewController: UIViewController {
     @IBAction func nameEdited(_ sender: Any) {
         userProfile.name = nameField.text!
     }
-    
     
     /// Update the birth year and life expectancy sliders.
     /// As birth year changes life expectancy min and current setting changes:
@@ -98,7 +97,9 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        nameField.delegate = self
         nameField.text = userProfile.name
+        
         updateBirthYear()
         updateLifeExpentency()
         updateActivityLevel()
@@ -145,6 +146,11 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
     
     func debugSliderValues() {
