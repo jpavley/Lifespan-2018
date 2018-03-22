@@ -14,6 +14,7 @@
 		180D6607203A0B9300661157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180D6605203A0B9300661157 /* LaunchScreen.storyboard */; };
 		180D660F203A0BF500661157 /* PrettyBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D660E203A0BF400661157 /* PrettyBackgroundView.swift */; };
 		184214CE20640692002FAA87 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 184214CD20640692002FAA87 /* web */; };
+		184214D120640A89002FAA87 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184214D020640A89002FAA87 /* WebKit.framework */; };
 		1870D580203B3BBE0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
 		1870D588203B41C90041EF53 /* LifeClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D587203B41C90041EF53 /* LifeClockTests.swift */; };
 		1870D58F203B41CC0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
@@ -56,6 +57,7 @@
 		180D6608203A0B9300661157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180D660E203A0BF400661157 /* PrettyBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyBackgroundView.swift; sourceTree = "<group>"; };
 		184214CD20640692002FAA87 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; name = web; path = "Lifespan 2018/web"; sourceTree = SOURCE_ROOT; };
+		184214D020640A89002FAA87 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1870D57F203B3BBE0041EF53 /* LifeClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClock.swift; sourceTree = "<group>"; };
 		1870D585203B41C90041EF53 /* LifeClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1870D587203B41C90041EF53 /* LifeClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClockTests.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184214D120640A89002FAA87 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +103,7 @@
 				180D65FB203A0B9300661157 /* Lifespan 2018 */,
 				1870D586203B41C90041EF53 /* LifeClockTests */,
 				180D65FA203A0B9300661157 /* Products */,
+				184214CF20640A88002FAA87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +131,14 @@
 				48356CF3203F40F50015CD47 /* lifeclock2.idraw */,
 			);
 			path = "Lifespan 2018";
+			sourceTree = "<group>";
+		};
+		184214CF20640A88002FAA87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				184214D020640A89002FAA87 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		1870D586203B41C90041EF53 /* LifeClockTests */ = {
