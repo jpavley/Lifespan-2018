@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import WebKit
 
 class InfoViewController: UIViewController {
 
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadHTMLFile(named: "web/info")
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +25,22 @@ class InfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    fileprivate func loadHTMLFile(named name: String) {
+        do {
+            guard
+                let filePath = Bundle.main.path(forResource: name, ofType: "html")
+                else {
+                    print("file read error")
+                    return
+            }
+            let contents = try String(contentsOfFile: filePath, encoding: .utf8)
+            let url = URL(fileURLWithPath: filePath)
+            webView.loadHTMLString(contents as String, baseURL: url)
+        } catch {
+            print("cant load HTML file")
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

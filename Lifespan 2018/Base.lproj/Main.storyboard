@@ -446,6 +446,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m2d-TV-629"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="yZC-jw-MQF" id="MwG-af-fNM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vu0-u5-e5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
