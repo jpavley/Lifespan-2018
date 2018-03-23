@@ -50,5 +50,10 @@ class InfoViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension InfoViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            decisionHandler(.allow)
+    }
 }
