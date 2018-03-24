@@ -12,11 +12,12 @@ import WebKit
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        webView.navigationDelegate = self
         WebUtilities.loadHTMLFile(named: "web/info", webView: webView)
     }
 
