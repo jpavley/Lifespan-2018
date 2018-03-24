@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import WebKit
 
 class AnalysisViewController: UIViewController {
-
+    
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        WebUtilities.loadHTMLFile(named: "web/analysis", webView: webView)
+
     }
 
     override func didReceiveMemoryWarning() {

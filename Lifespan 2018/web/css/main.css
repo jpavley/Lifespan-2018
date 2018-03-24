@@ -102,6 +102,21 @@ textarea {
     font-family: Arial, Helvetica, sans-serif
 }
 
+.subtitle {
+    color: gray;
+}
+
+mark {
+    background-color: #FFF5F6;
+    color: darkred;
+    font-style: bold;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: #FFDDDE;
+    padding: 2px;
+    border-radius: 10px;
+}
+
 
 
 

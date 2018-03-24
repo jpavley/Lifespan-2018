@@ -407,14 +407,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wfg-ur-gtn">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DPx-3Y-TTZ" firstAttribute="centerX" secondItem="d8H-C5-nqO" secondAttribute="centerX" id="3wh-pf-ihB"/>
+                            <constraint firstItem="Wfg-ur-gtn" firstAttribute="top" secondItem="CMD-qA-fWV" secondAttribute="top" id="ED8-ge-7ny"/>
                             <constraint firstItem="DPx-3Y-TTZ" firstAttribute="centerY" secondItem="d8H-C5-nqO" secondAttribute="centerY" id="MSX-G7-Hpg"/>
+                            <constraint firstItem="CMD-qA-fWV" firstAttribute="trailing" secondItem="Wfg-ur-gtn" secondAttribute="trailing" id="VOv-uX-weX"/>
+                            <constraint firstItem="Wfg-ur-gtn" firstAttribute="leading" secondItem="CMD-qA-fWV" secondAttribute="leading" id="hRP-5X-pjB"/>
+                            <constraint firstItem="CMD-qA-fWV" firstAttribute="bottom" secondItem="Wfg-ur-gtn" secondAttribute="bottom" id="o3T-uz-JaM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CMD-qA-fWV"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="Wfg-ur-gtn" id="mRz-Wo-2YD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSe-cb-AHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,28 +17,12 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        loadHTMLFile(named: "web/info")
+        WebUtilities.loadHTMLFile(named: "web/info", webView: webView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    fileprivate func loadHTMLFile(named name: String) {
-        do {
-            guard
-                let filePath = Bundle.main.path(forResource: name, ofType: "html")
-                else {
-                    print("file read error")
-                    return
-            }
-            let contents = try String(contentsOfFile: filePath, encoding: .utf8)
-            let url = URL(fileURLWithPath: filePath)
-            webView.loadHTMLString(contents as String, baseURL: url)
-        } catch {
-            print("cant load HTML file")
-        }
     }
     
     /*
