@@ -26,5 +26,9 @@ class WebUtilities {
             print("load error file \(name)")
         }
     }
+    
+    static func loadHTMLString(html: String, webView: WKWebView) {
+        webView.loadHTMLString(html, baseURL: nil)
+    }
 
 }

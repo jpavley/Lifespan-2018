@@ -14,9 +14,9 @@ class ClockViewController: UIViewController {
     @IBOutlet weak var timeSpanLabel: UILabel!
     @IBOutlet weak var agedLabel: UILabel!
     
-    var lifeSpan: Lifespan!
-    var lifeClock: LifeClock!
-    var userProfile: UserProfile!
+    weak var lifeSpan: Lifespan!
+    weak var lifeClock: LifeClock!
+    weak var userProfile: UserProfile!
     
     let minuteHandTag = 200
     let hourHandTag = 300
@@ -28,6 +28,7 @@ class ClockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        updateView()
     }
     
     // TODO: willMove is called twice at startup, which means LifeClock is created twice
@@ -35,14 +36,15 @@ class ClockViewController: UIViewController {
         if parent == nil {
             return
         }
-        
+
         let masterVC = parent as! MasterViewController
         userProfile = masterVC.userProfile
-        updateView()
+        lifeSpan = masterVC.lifeSpan
+        lifeClock = masterVC.lifeClock
     }
     
     fileprivate func updateView() {
-        updateLifeClock()
+        //updateLifeClock()
         
         userNameLabel.text = userProfile.name
         
@@ -101,6 +103,22 @@ class ClockViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if segue.destination is MasterViewController {
+            let destination = segue.destination as! MasterViewController
+            destination.userProfile = userProfile
+            destination.lifeSpan = lifeSpan
+            destination.lifeClock = lifeClock
+        }
+    }
+
 
 }
 

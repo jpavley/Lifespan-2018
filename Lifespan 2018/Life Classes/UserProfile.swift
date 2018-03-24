@@ -55,6 +55,12 @@ class UserProfile {
         }
     }
     
+    var age: CGFloat {
+        get {
+            return CGFloat(CalendarUtilities.thisYear() - birthYear.setting)
+        }
+    }
+    
     var activity: CGFloat {
         get {
             return CGFloat(activityLevel.setting)
