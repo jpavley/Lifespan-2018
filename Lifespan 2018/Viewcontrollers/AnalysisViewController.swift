@@ -9,13 +9,13 @@
 import UIKit
 import WebKit
 
-class AnalysisViewController: UIViewController {
+class AnalysisViewController: UIViewController, SharedState {
+    
+    var userProfile: UserProfile?
+    var lifeSpan: Lifespan?
+    var lifeClock: LifeClock?
     
     @IBOutlet weak var webView: WKWebView!
-    
-    var lifeSpan: Lifespan!
-    var lifeClock: LifeClock!
-    var userProfile: UserProfile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,11 @@ class AnalysisViewController: UIViewController {
     }
     
     fileprivate func generateText() -> String {
+        
+        guard let userProfile = userProfile, let lifeSpan = lifeSpan else {
+            return ""
+        }
+
         
 //        John F. Pavley was born <mark>57</mark> years ago in the year <mark>1961</mark>. His life expectancy of <mark>83</mark> years is influenced by a <mark>low</mark> level of physical activity and a <mark>high</mark> level of mental stress, and thus <mark>reduced</mark> to <mark>75</mark> years, <mark>robbing</mark> him of <mark>8</mark> years. If he <mark>doesn’t improve</mark> his life style he could die in <mark>18</mark> years from today, in the year <mark>2036</mark>.</p>
         
@@ -51,14 +56,15 @@ class AnalysisViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        prepareState(for: segue)
     }
-    */
+    
 
 }

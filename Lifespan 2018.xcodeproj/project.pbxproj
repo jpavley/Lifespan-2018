@@ -19,9 +19,9 @@
 		1870D588203B41C90041EF53 /* LifeClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D587203B41C90041EF53 /* LifeClockTests.swift */; };
 		1870D58F203B41CC0041EF53 /* LifeClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870D57F203B3BBE0041EF53 /* LifeClock.swift */; };
 		1878EFF820668FC500BEA332 /* WebUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878EFF720668FC500BEA332 /* WebUtilities.swift */; };
+		1878EFFC206753DC00BEA332 /* SharedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878EFFB206753DC00BEA332 /* SharedState.swift */; };
 		18B46E17204B420900BE808E /* CalendarUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B46E16204B420900BE808E /* CalendarUtilities.swift */; };
 		18B46E18204B42C200BE808E /* CalendarUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B46E16204B420900BE808E /* CalendarUtilities.swift */; };
-		18BC41E0204226370035648A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41DF204226370035648A /* MasterViewController.swift */; };
 		18BC41E2204226BB0035648A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E1204226BB0035648A /* ProfileViewController.swift */; };
 		18BC41E4204226C70035648A /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E3204226C70035648A /* AnalysisViewController.swift */; };
 		18BC41E6204226D30035648A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC41E5204226D30035648A /* InfoViewController.swift */; };
@@ -64,8 +64,8 @@
 		1870D587203B41C90041EF53 /* LifeClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeClockTests.swift; sourceTree = "<group>"; };
 		1870D589203B41C90041EF53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1878EFF720668FC500BEA332 /* WebUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUtilities.swift; sourceTree = "<group>"; };
+		1878EFFB206753DC00BEA332 /* SharedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedState.swift; sourceTree = "<group>"; };
 		18B46E16204B420900BE808E /* CalendarUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUtilities.swift; sourceTree = "<group>"; };
-		18BC41DF204226370035648A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		18BC41E1204226BB0035648A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18BC41E3204226C70035648A /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		18BC41E5204226D30035648A /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -156,11 +156,11 @@
 		18BC41E7204227130035648A /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				18BC41DF204226370035648A /* MasterViewController.swift */,
 				180D65FE203A0B9300661157 /* ClockViewController.swift */,
 				18BC41E1204226BB0035648A /* ProfileViewController.swift */,
 				18BC41E3204226C70035648A /* AnalysisViewController.swift */,
 				18BC41E5204226D30035648A /* InfoViewController.swift */,
+				1878EFFB206753DC00BEA332 /* SharedState.swift */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -295,9 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				48356CF7203F5F4C0015CD47 /* CoreGraphicsView.swift in Sources */,
+				1878EFFC206753DC00BEA332 /* SharedState.swift in Sources */,
 				489ABA3F203F699400227BFB /* HourHandView.swift in Sources */,
 				18BC41EA204253EF0035648A /* UserProfile.swift in Sources */,
-				18BC41E0204226370035648A /* MasterViewController.swift in Sources */,
 				180D660F203A0BF500661157 /* PrettyBackgroundView.swift in Sources */,
 				48356CF5203F48B40015CD47 /* MinuteHandView.swift in Sources */,
 				48356CF2203E1C430015CD47 /* ClockView.swift in Sources */,

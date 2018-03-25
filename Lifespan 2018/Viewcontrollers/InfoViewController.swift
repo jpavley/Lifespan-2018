@@ -9,8 +9,12 @@
 import UIKit
 import WebKit
 
-class InfoViewController: UIViewController {
-
+class InfoViewController: UIViewController, SharedState {
+    
+    var userProfile: UserProfile?
+    var lifeSpan: Lifespan?
+    var lifeClock: LifeClock?
+        
     @IBOutlet weak var webView: WKWebView!
         
     override func viewDidLoad() {
@@ -26,15 +30,16 @@ class InfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        prepareState(for: segue)
     }
-    */
+    
 }
 
 extension InfoViewController: WKNavigationDelegate {

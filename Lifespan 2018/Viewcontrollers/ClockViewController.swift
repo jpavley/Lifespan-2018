@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ClockViewController: UIViewController {
+class ClockViewController: UIViewController, SharedState {
+    
+    var userProfile: UserProfile?
+    var lifeSpan: Lifespan?
+    var lifeClock: LifeClock?
     
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var timeSpanLabel: UILabel!
     @IBOutlet weak var agedLabel: UILabel!
-    
-    var userProfile: UserProfile?
     
     let minuteHandTag = 200
     let hourHandTag = 300
@@ -26,44 +28,56 @@ class ClockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        userProfile = UserProfile()
         updateView()
-    }
-    
-    // TODO: willMove is called twice at startup, which means LifeClock is created twice
-    override func willMove(toParentViewController parent: UIViewController?) {
-        if parent == nil {
-            return
-        }
-
-        let masterVC = parent as! MasterViewController
-        userProfile = masterVC.userProfile
     }
     
     fileprivate func updateView() {
         
         updateLifeClock()
         
-        userNameLabel.text = userProfile!.name
+        guard let userProfile = userProfile, let lifeSpan = lifeSpan else {
+            return
+        }
         
-        let birthYear = String(format: "%.0f", userProfile!.birthYear.setting)
-        let deathYear = String(format: "%.0f", CGFloat(userProfile!.birthYear.setting) + lifeSpan!.modifiedALE!)
+        userNameLabel.text = userProfile.name
+        
+        let birthYear = String(format: "%.0f", userProfile.birthYear.setting)
+        let deathYear = String(format: "%.0f", CGFloat(userProfile.birthYear.setting) + lifeSpan.modifiedALE!)
         timeSpanLabel.text = "\(birthYear) to \(deathYear)"
         
-        let age = String(format: "%.0f", lifeSpan!.modifiedALE!)
+        let age = String(format: "%.0f", lifeSpan.modifiedALE!)
         agedLabel.text = "Aged \(age)"
         
     }
     
     fileprivate func updateLifeClock() {
         
-        let ls = createLifespanForUser()
-        let lc = createLifeClockForUser(with: ls!)
-        setClock(with: lc)
+        lifeSpan = createLifespanForUser()
         
-        if CalendarUtilities.stringToTime(timeString: "00:00:00") == lc.time {
-            userProfile!.livingOnBorrowedTime = true
+        guard let lifeSpan = lifeSpan else {
+            print("cant create LifeSpan")
+            return
+        }
+        
+        lifeClock = createLifeClockForUser(with: lifeSpan)
+        
+        guard let lifeClock = lifeClock else {
+            print("cant create LifeClock")
+            return
+        }
+        
+        setClock(with: lifeClock)
+        
+        guard let userProfile = userProfile else {
+            print("cant create userProfile")
+            return
+        }
+        
+        if CalendarUtilities.stringToTime(timeString: "00:00:00") == lifeClock.time {
+            userProfile.livingOnBorrowedTime = true
         } else {
-            userProfile!.livingOnBorrowedTime = false
+            userProfile.livingOnBorrowedTime = false
         }
         
     }
@@ -75,7 +89,7 @@ class ClockViewController: UIViewController {
         return lc
     }
     
-    fileprivate func createLifespanForUser() -> Lifespan? {
+    fileprivate func createLifespanForUser() -> Lifespan {
         
         let birthDate = CalendarUtilities.stringToDate(dateString: userProfile!.dob)
         let ls = Lifespan(name: userProfile!.name, dateOfBirth: birthDate!, averageLifeExpectancy: userProfile!.ale)
@@ -105,6 +119,17 @@ class ClockViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        prepareState(for: segue)
+     }
+    
 
 }
 

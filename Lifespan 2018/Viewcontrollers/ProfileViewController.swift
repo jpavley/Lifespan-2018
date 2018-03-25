@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UITextFieldDelegate {
+class ProfileViewController: UIViewController, UITextFieldDelegate, SharedState {
     
-    var userProfile: UserProfile!
+    var userProfile: UserProfile?
+    var lifeSpan: Lifespan?
+    var lifeClock: LifeClock?
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var birthYearField: UITextField!
@@ -25,6 +27,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBAction func nameEdited(_ sender: Any) {
+        guard let userProfile = userProfile else {
+            return
+        }
+
         userProfile.name = nameField.text!
     }
     
@@ -43,6 +49,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         birthYearField.text = String(format: "%.0f", sliderValue)
         
         // set birth year
+        guard let userProfile = userProfile else {
+            return
+        }
+
         userProfile.birthYear.setting = sliderValue
         
         // when the birth year changes the min value of life expenctancy changes
@@ -73,6 +83,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         lifeExpectancyField.text = String(format: "%.0f", sliderValue)
         
         // set life expectancy
+        guard let userProfile = userProfile else {
+            return
+        }
+
         userProfile.lifeExpectancy.setting = sliderValue
     }
 
@@ -81,6 +95,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         activityLevelField.text = String(format: "%.0f", sliderValue)
         
         // set actively level
+        guard let userProfile = userProfile else {
+            return
+        }
+
         userProfile.activityLevel.setting = sliderValue
     }
 
@@ -89,6 +107,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         stressLevelField.text = String(format: "%.0f", sliderValue)
         
         // set stress level
+        guard let userProfile = userProfile else {
+            return
+        }
+
         userProfile.stressLevel.setting = sliderValue
     }
     
@@ -96,6 +118,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        guard let userProfile = userProfile else {
+            return
+        }
         
         nameField.delegate = self
         nameField.text = userProfile.name
@@ -107,6 +132,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     }
     
     fileprivate func updateBirthYear() {
+        guard let userProfile = userProfile else {
+            return
+        }
+
         birthYearSlider.minimumValue = userProfile.birthYear.min
         birthYearSlider.maximumValue = userProfile.birthYear.max
         birthYearSlider.value = userProfile.birthYear.setting
@@ -114,6 +143,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     }
     
     fileprivate func updateLifeExpentency() {
+        guard let userProfile = userProfile else {
+            return
+        }
+
         lifeExpectancySlider.minimumValue = userProfile.lifeExpectancy.min
         lifeExpectancySlider.maximumValue = userProfile.lifeExpectancy.max
         lifeExpectancySlider.value = userProfile.lifeExpectancy.setting
@@ -121,6 +154,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     }
     
     fileprivate func updateActivityLevel() {
+        guard let userProfile = userProfile else {
+            return
+        }
+
         activityLevelSlider.minimumValue = userProfile.activityLevel.min
         activityLevelSlider.maximumValue = userProfile.activityLevel.max
         activityLevelSlider.value = userProfile.activityLevel.setting
@@ -128,21 +165,16 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     }
     
     fileprivate func updateStressLevel() {
+        guard let userProfile = userProfile else {
+            return
+        }
+
         stressLevelSlider.minimumValue = userProfile.stressLevel.min
         stressLevelSlider.maximumValue = userProfile.stressLevel.max
         stressLevelSlider.value = userProfile.stressLevel.setting
         stressLevelField.text = String(format: "%.0f", userProfile.stressLevel.setting)
     }
     
-    override func willMove(toParentViewController parent: UIViewController?) {
-        if parent == nil {
-            return
-        }
-        
-        let masterVC = parent as! MasterViewController
-        userProfile = masterVC.userProfile
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -154,19 +186,24 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     }
     
     func debugSliderValues() {
+        guard let userProfile = userProfile else {
+            return
+        }
+        
         print("")
         print("birthYear      \(userProfile.birthYear.min), \(userProfile.birthYear.max), \(userProfile.birthYear.setting)")
         print("lifeExpectancy \(userProfile.lifeExpectancy.min), \(userProfile.lifeExpectancy.max), \(userProfile.lifeExpectancy.setting)")
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        prepareState(for: segue)
     }
-    */
+    
 
 }
