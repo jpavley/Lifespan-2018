@@ -16,8 +16,6 @@ import UIKit
 class MasterViewController: UIViewController {
     
     var userProfile: UserProfile?
-    var lifeSpan: Lifespan?
-    var lifeClock: LifeClock?
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -82,32 +80,7 @@ class MasterViewController: UIViewController {
         viewController.view.removeFromSuperview()
         viewController.removeFromParentViewController()
     }
-    
-    fileprivate func createLifeClockForUser(with ls: Lifespan) -> LifeClock {
         
-        let spanTime = ls.lifespanAsTime()
-        let lc = LifeClock(time: spanTime!)
-        return lc
-    }
-    
-    fileprivate func createLifespanForUser() -> Lifespan? {
-        
-        guard let userProfile = userProfile  else {
-            return nil
-        }
-        
-        let birthDate = CalendarUtilities.stringToDate(dateString: userProfile.dob)
-        let ls = Lifespan(name: userProfile.name, dateOfBirth: birthDate!, averageLifeExpectancy: userProfile.ale)
-        
-        let activityLevelMod = SpanModifier(name: "activityLevel", value: CGFloat(userProfile.activityLevel.setting), positive: true)
-        ls.spanModifiers?.append(activityLevelMod)
-        
-        let stressLevelMod = SpanModifier(name: "stressLevel", value: CGFloat(userProfile.stressLevel.setting), positive: false)
-        ls.spanModifiers?.append(stressLevelMod)
-
-        return ls
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -115,8 +88,6 @@ class MasterViewController: UIViewController {
         
         if userProfile == nil {
             userProfile = UserProfile()
-            lifeSpan = createLifespanForUser()
-            lifeClock = createLifeClockForUser(with: lifeSpan!)
         }
         
         currentSegmentID = clockSegmentID
@@ -182,21 +153,5 @@ class MasterViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
-        if segue.destination is ClockViewController {
-            let destination = segue.destination as! ClockViewController
-            destination.userProfile = userProfile
-            destination.lifeSpan = lifeSpan
-            destination.lifeClock = lifeClock
-        }
-    }
-    */
 
 }
