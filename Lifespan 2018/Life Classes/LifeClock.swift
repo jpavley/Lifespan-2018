@@ -17,6 +17,8 @@ import CoreGraphics
 /// https://sites.google.com/site/mymathclassroom/trigonometry/clock-angle-problems/clock-angle-problems-involving-second-hands
 class LifeClock: CustomStringConvertible {
     
+    var name: String
+    
     var description: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "hh:mm:ss"
@@ -63,8 +65,10 @@ class LifeClock: CustomStringConvertible {
     
     /// Inits a LifeClock object with the time in a Date
     ///
-    /// - Parameter time: Date that contains the time to model as a clock
-    init(time: Date = Date()) {
+    /// - Parameter time: Date that contains the time to model as a clock.
+    ///   If no parameter is suppled life clock is set to current time.
+    init(time: Date = Date(), name: String = "") {
         self.time = time
+        self.name = name
     }
 }
