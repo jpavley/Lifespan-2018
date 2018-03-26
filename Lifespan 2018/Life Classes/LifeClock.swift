@@ -64,7 +64,7 @@ class LifeClock: CustomStringConvertible {
     /// Inits a LifeClock object with the time in a Date
     ///
     /// - Parameter time: Date that contains the time to model as a clock
-    init(time: Date) {
+    init(time: Date = Date()) {
         self.time = time
     }
 }
